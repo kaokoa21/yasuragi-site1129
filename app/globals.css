@@ -1,0 +1,46 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* フォント設定 */
+.font-m-plus-rounded {
+  font-family: var(--font-m-plus-rounded), 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* HP全体の背景 - オレンジや黄色の水玉模様 */
+body {
+  background-color: #fff5e6;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff5e6;
+  background-image: url('/hp-bg-1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.4;
+  /* Make it subtle */
+  z-index: -2;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: -1;
+  pointer-events: none;
+}
