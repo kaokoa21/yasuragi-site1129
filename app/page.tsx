@@ -3,6 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { FaHeart, FaFileAlt, FaHandshake, FaBed } from 'react-icons/fa';
+import { BiBowlRice } from 'react-icons/bi';
+import dynamic from 'next/dynamic';
+
+const LeafletMap = dynamic(() => import('../components/LeafletMap'), {
+  ssr: false,
+  loading: () => <div className="w-full h-full min-h-[400px] bg-gray-100 animate-pulse rounded-3xl flex items-center justify-center text-gray-400">地図を読み込み中...</div>
+});
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,11 +49,13 @@ export default function Home() {
 
             {/* デスクトップメニュー */}
             <div className="hidden md:flex items-center space-x-8">
+              <button onClick={() => scrollToSection('facilities')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">施設の空き状況</button>
               <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">ごあいさつ</button>
               <button onClick={() => scrollToSection('daily-flow')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">1日の流れ</button>
               <button onClick={() => scrollToSection('services')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">サービス</button>
               <button onClick={() => scrollToSection('flow')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">ご利用手続き</button>
-              <button onClick={() => scrollToSection('facilities')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">施設の空き状況</button>
+              <button onClick={() => scrollToSection('facility-intro')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">施設紹介</button>
+              <button onClick={() => scrollToSection('recruit')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">採用情報</button>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5"
@@ -71,11 +81,13 @@ export default function Home() {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg animate-fade-in-down">
             <div className="px-6 py-4 space-y-4">
+              <button onClick={() => scrollToSection('facilities')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">施設の空き状況</button>
               <button onClick={() => scrollToSection('about')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">ごあいさつ</button>
               <button onClick={() => scrollToSection('daily-flow')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">1日の流れ</button>
               <button onClick={() => scrollToSection('services')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">サービス</button>
               <button onClick={() => scrollToSection('flow')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">ご利用手続き</button>
-              <button onClick={() => scrollToSection('facilities')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">施設の空き状況</button>
+              <button onClick={() => scrollToSection('facility-intro')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">施設紹介</button>
+              <button onClick={() => scrollToSection('recruit')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">採用情報</button>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="block w-full text-center bg-orange-500 text-white py-3 rounded-xl font-bold shadow-md mt-4"
@@ -115,6 +127,116 @@ export default function Home() {
             >
               無料見学・ご相談はこちら
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* 施設の空き状況 */}
+      <section id="facilities" className="py-16 px-6 bg-white/80 backdrop-blur-sm relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-green-800 mb-12 font-zen-maru">施設の空き状況</h2>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Map Area - Left on PC, Top on Mobile */}
+            <div className="w-full h-full min-h-[400px] rounded-3xl overflow-hidden shadow-md border border-gray-200">
+              <LeafletMap />
+            </div>
+
+            {/* Cards List - Right on PC, Bottom on Mobile */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <button
+                onClick={() => scrollToSection('shikiji-detail')}
+                className="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm text-center flex flex-col hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                <div className="space-y-2 flex-1 w-full">
+                  <p className="text-xl font-bold text-green-800">やすらぎの家 敷地</p>
+                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区敷地2-26-2 左京ビル201</p>
+
+                  <div className="bg-orange-500 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
+                    <p className="text-white text-2xl font-bold">残り1室</p>
+                  </div>
+
+                  {/* Capacity Breakdown */}
+                  <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                      <span className="font-bold text-gray-700">本体</span>
+                      <span className="font-medium text-gray-600">定員5名 (<span className="text-red-600 font-bold">入居4名</span>)</span>
+                    </div>
+                    <div className="flex justify-between items-center pt-1">
+                      <span className="font-bold text-gray-700">サテライト</span>
+                      <span className="font-medium text-gray-600">定員2名 (入居2名)</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 text-green-600 font-medium">
+                    <i className="ri-arrow-down-line text-lg"></i>
+                  </div>
+                </div>
+              </button>
+
+              <button
+                onClick={() => scrollToSection('sanbancho-detail')}
+                className="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm text-center flex flex-col hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                <div className="space-y-2 flex-1 w-full">
+                  <p className="text-xl font-bold text-green-800">やすらぎの家 三番町</p>
+                  <p className="text-sm font-medium text-gray-600 mb-2">葵区三番町23-6</p>
+
+                  <div className="bg-gray-400 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
+                    <p className="text-white text-2xl font-bold">満室</p>
+                  </div>
+
+                  {/* Capacity Breakdown */}
+                  <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                      <span className="font-bold text-gray-700">本体</span>
+                      <span className="font-medium text-gray-600">定員6名 (入居6名)</span>
+                    </div>
+                    <div className="flex justify-between items-center pt-1">
+                      <span className="font-bold text-gray-700">サテライト</span>
+                      <span className="font-medium text-gray-600">定員2名 (入居2名)</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 text-green-600 font-medium">
+                    <i className="ri-arrow-down-line text-lg"></i>
+                  </div>
+                </div>
+              </button>
+
+              <button
+                onClick={() => scrollToSection('petit-oga-detail')}
+                className="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm text-center flex flex-col hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                <div className="space-y-2 flex-1 w-full">
+                  <p className="text-xl font-bold text-green-800">やすらぎの家 小鹿</p>
+                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区小鹿2-39-1 プチ小鹿</p>
+
+                  <div className="bg-orange-500 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
+                    <p className="text-white text-2xl font-bold">残り4室</p>
+                  </div>
+
+                  {/* Capacity Breakdown */}
+                  <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                      <span className="font-bold text-gray-700">本体</span>
+                      <span className="font-medium text-gray-600">定員6名 (<span className="text-red-600 font-bold">入居4名</span>)</span>
+                    </div>
+                    <div className="flex justify-between items-center pt-1">
+                      <span className="font-bold text-gray-700">サテライト</span>
+                      <span className="font-medium text-gray-600">定員2名 (<span className="text-red-600 font-bold">入居0名</span>)</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 text-green-600 font-medium">
+                    <i className="ri-arrow-down-line text-lg"></i>
+                  </div>
+                </div>
+              </button>
+
+              {/* Placeholder for 4th facility */}
+              <div className="w-full"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -178,12 +300,16 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 relative">
                     <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
                       7:30
                     </div>
                     <div className="text-green-800 font-semibold text-lg md:text-xl">
                       朝食（朝食提供）
+                    </div>
+                    {/* Breakfast Icon */}
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-24 h-24 bg-white/50 rounded-full flex items-center justify-center shadow-sm hidden md:flex">
+                      <BiBowlRice className="text-5xl text-orange-500" />
                     </div>
                   </div>
 
@@ -249,8 +375,8 @@ export default function Home() {
                 </div>
 
                 {/* イラスト配置エリア */}
-                <div className="absolute bottom-6 right-6 w-24 h-24 md:w-32 md:h-32 bg-white/50 border-2 border-dashed border-orange-300 rounded-full flex items-center justify-center">
-                  <p className="text-orange-400 text-xs text-center font-medium">イラスト</p>
+                <div className="absolute bottom-6 right-6 w-24 h-24 bg-white/50 rounded-full flex items-center justify-center shadow-sm">
+                  <FaBed className="text-5xl text-orange-500" />
                 </div>
               </div>
             </div>
@@ -296,8 +422,11 @@ export default function Home() {
               </h3>
 
               {/* イラスト配置エリア */}
-              <div className="w-full h-32 bg-white/50 rounded-2xl border-2 border-dashed border-orange-300 flex items-center justify-center mb-6">
-                <p className="text-orange-400 text-sm font-medium">イラスト配置</p>
+              {/* Icon Area */}
+              <div className="flex justify-center mb-6">
+                <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center shadow-sm">
+                  <FaHeart className="text-5xl text-orange-500" />
+                </div>
               </div>
 
               {/* サービスリスト */}
@@ -324,8 +453,11 @@ export default function Home() {
               </h3>
 
               {/* イラスト配置エリア */}
-              <div className="w-full h-32 bg-white/50 rounded-2xl border-2 border-dashed border-orange-300 flex items-center justify-center mb-6">
-                <p className="text-orange-400 text-sm font-medium">イラスト配置</p>
+              {/* Icon Area */}
+              <div className="flex justify-center mb-6">
+                <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center shadow-sm">
+                  <FaFileAlt className="text-5xl text-orange-500" />
+                </div>
               </div>
 
               {/* サービスリスト */}
@@ -352,8 +484,11 @@ export default function Home() {
               </h3>
 
               {/* イラスト配置エリア */}
-              <div className="w-full h-32 bg-white/50 rounded-2xl border-2 border-dashed border-orange-300 flex items-center justify-center mb-6">
-                <p className="text-orange-400 text-sm font-medium">イラスト配置</p>
+              {/* Icon Area */}
+              <div className="flex justify-center mb-6">
+                <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center shadow-sm">
+                  <FaHandshake className="text-5xl text-orange-500" />
+                </div>
               </div>
 
               {/* サービスリスト */}
@@ -488,106 +623,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 施設の空き状況 */}
-      <section id="facilities" className="py-16 px-6 bg-white/80 backdrop-blur-sm relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-green-800 mb-12 font-zen-maru">施設の空き状況</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <button
-              onClick={() => scrollToSection('shikiji-detail')}
-              className="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm text-center flex flex-col hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
-            >
-              <div className="space-y-2 flex-1 w-full">
-                <p className="text-xl font-bold text-green-800">やすらぎの家 敷地</p>
-                <p className="text-sm font-medium text-gray-600 mb-2">駿河区敷地2-26-2 左京ビル201</p>
 
-                <div className="bg-orange-500 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
-                  <p className="text-white text-2xl font-bold">残り1室</p>
-                </div>
 
-                {/* Capacity Breakdown */}
-                <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span className="font-bold text-gray-700">本体</span>
-                    <span className="font-medium text-gray-600">定員5名 (<span className="text-red-600 font-bold">入居4名</span>)</span>
-                  </div>
-                  <div className="flex justify-between items-center pt-1">
-                    <span className="font-bold text-gray-700">サテライト</span>
-                    <span className="font-medium text-gray-600">定員2名 (入居2名)</span>
-                  </div>
-                </div>
-
-                <div className="mt-4 text-green-600 font-medium">
-                  <i className="ri-arrow-down-line text-lg"></i>
-                </div>
-              </div>
-            </button>
-
-            <button
-              onClick={() => scrollToSection('sanbancho-detail')}
-              className="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm text-center flex flex-col hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
-            >
-              <div className="space-y-2 flex-1 w-full">
-                <p className="text-xl font-bold text-green-800">やすらぎの家 三番町</p>
-                <p className="text-sm font-medium text-gray-600 mb-2">葵区三番町23-6</p>
-
-                <div className="bg-gray-400 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
-                  <p className="text-white text-2xl font-bold">満室</p>
-                </div>
-
-                {/* Capacity Breakdown */}
-                <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span className="font-bold text-gray-700">本体</span>
-                    <span className="font-medium text-gray-600">定員6名 (入居6名)</span>
-                  </div>
-                  <div className="flex justify-between items-center pt-1">
-                    <span className="font-bold text-gray-700">サテライト</span>
-                    <span className="font-medium text-gray-600">定員2名 (入居2名)</span>
-                  </div>
-                </div>
-
-                <div className="mt-4 text-green-600 font-medium">
-                  <i className="ri-arrow-down-line text-lg"></i>
-                </div>
-              </div>
-            </button>
-
-            <button
-              onClick={() => scrollToSection('petit-oga-detail')}
-              className="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm text-center flex flex-col hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
-            >
-              <div className="space-y-2 flex-1 w-full">
-                <p className="text-xl font-bold text-green-800">やすらぎの家 小鹿</p>
-                <p className="text-sm font-medium text-gray-600 mb-2">駿河区小鹿2-39-1 プチ小鹿</p>
-
-                <div className="bg-orange-500 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
-                  <p className="text-white text-2xl font-bold">残り4室</p>
-                </div>
-
-                {/* Capacity Breakdown */}
-                <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                    <span className="font-bold text-gray-700">本体</span>
-                    <span className="font-medium text-gray-600">定員6名 (<span className="text-red-600 font-bold">入居4名</span>)</span>
-                  </div>
-                  <div className="flex justify-between items-center pt-1">
-                    <span className="font-bold text-gray-700">サテライト</span>
-                    <span className="font-medium text-gray-600">定員2名 (<span className="text-red-600 font-bold">入居0名</span>)</span>
-                  </div>
-                </div>
-
-                <div className="mt-4 text-green-600 font-medium">
-                  <i className="ri-arrow-down-line text-lg"></i>
-                </div>
-              </div>
-            </button>
-          </div>
+      {/* 施設紹介ヘッダー */}
+      <section id="facility-intro" className="pt-24 pb-8 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
+            施設紹介
+          </h2>
+          <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
         </div>
       </section>
 
       {/* 左京ビル施設詳細 */}
-      <section id="shikiji-detail" className="py-24 px-6 relative overflow-hidden">
+      <section id="shikiji-detail" className="py-12 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 敷地</h2>
@@ -981,6 +1030,33 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 採用情報 */}
+      <section id="recruit" className="py-16 px-6 relative overflow-hidden bg-orange-50">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
+              採用情報
+            </h2>
+            <div className="w-16 h-1 bg-orange-500 mx-auto"></div>
+          </div>
+
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            やすらぎの家では、一緒に働く仲間を募集しています。<br />
+            詳細な求人情報は、以下の採用サイト（Airワーク）をご覧ください。
+          </p>
+
+          <a
+            href="https://airwork.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-full text-lg font-bold shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+          >
+            採用情報を見る（Airワーク）
+            <i className="ri-external-link-line"></i>
+          </a>
         </div>
       </section>
 
