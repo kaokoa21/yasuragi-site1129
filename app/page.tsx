@@ -132,7 +132,15 @@ export default function Home() {
       </section>
 
       {/* 施設の空き状況 */}
-      <section id="facilities" className="py-16 px-6 bg-white/80 backdrop-blur-sm relative z-10">
+      <section
+        id="facilities"
+        className="py-16 px-6 relative z-10"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("/葉っぱ画像①.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-green-800 mb-12 font-zen-maru">施設の空き状況</h2>
 
@@ -264,392 +272,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ごあいさつ */}
-      <section id="about" className="py-24 px-6 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
-              ごあいさつ
-            </h2>
-            <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
-            <div className="order-2 lg:order-1 lg:col-span-1 h-full">
-              {/* 画像を配置するスペース（1/3） */}
-              <div className="w-full h-full bg-transparent rounded-3xl border-2 border-dashed border-gray-300 flex items-center justify-center min-h-[300px]">
-                <p className="text-gray-400 text-sm">画像を配置</p>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2 lg:col-span-2">
-              <div className="bg-gradient-to-br from-orange-50 to-white p-8 md:p-10 rounded-3xl shadow-sm border border-orange-100 relative overflow-hidden">
-                <div className="space-y-4 text-xl md:text-2xl leading-relaxed text-gray-700">
-                  <p>
-                    私たちライフリスト株式会社は、静岡市を中心に地域密着型不動産賃貸業を運営しております。
-                  </p>
-                  <p>
-                    この度、静岡市駿河区敷地に障がいのある方のグループホーム「やすらぎの家」を開設する運びとなりました。「やすらぎの家」は障がいをお持ちで、将来は自立した生活を営みたいと希望される方が少人数での共同生活や地域社会との交流を通し、ここから新しいスタートを切るための障がい者支援施設として設立されたグループホーム（共同生活援助）です。利用者様はここで、当法人のスタッフと共同生活を営みながら、それぞれの個性を活かし安全・快適に暮らしていただく事ができます。
-                  </p>
-                  <p>
-                    私たちは、「やすらぎの家」で暮らす全ての利用者様、お一人おひとりの生活を尊重し、ここに暮らしながら、それぞれの「自立」の実現に向かう夢を、心を込めて支援させていただきます。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 1日の流れ */}
-      <section id="daily-flow" className="py-12 px-6 relative overflow-hidden min-h-screen flex items-center">
-        <div className="w-full max-w-7xl mx-auto relative">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
-              1日の大まかな流れ
-            </h2>
-            <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
-          </div>
-
-          <div className="w-full grid lg:grid-cols-2 gap-8 items-stretch">
-            {/* スケジュール */}
-            <div className="w-full">
-              <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-6 shadow-lg border border-orange-200 h-full relative">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-4">
-                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
-                      6:30
-                    </div>
-                    <div className="text-green-800 font-semibold text-lg md:text-xl">
-                      リビング・ダイニング開散　起床支援
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4 relative">
-                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
-                      7:30
-                    </div>
-                    <div className="text-green-800 font-semibold text-lg md:text-xl">
-                      朝食（朝食提供）
-                    </div>
-                    {/* Breakfast Icon */}
-                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-24 h-24 bg-white/50 rounded-full flex items-center justify-center shadow-sm hidden md:flex">
-                      <BiBowlRice className="text-5xl text-orange-500" />
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
-                      9:00
-                    </div>
-                    <div className="text-green-800 font-semibold text-lg md:text-xl">
-                      出発（お見送り）
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-center py-6">
-                    <div className="text-green-800 font-semibold text-lg md:text-xl">
-                      ～日中通所先～
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
-                      16:00
-                    </div>
-                    <div className="text-green-800 font-semibold text-lg md:text-xl">
-                      帰宅
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
-                      18:00
-                    </div>
-                    <div className="text-green-800 font-semibold text-lg md:text-xl">
-                      夕食（夕食提供）
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
-                      19:00
-                    </div>
-                    <div className="text-green-800 font-semibold text-lg md:text-xl">
-                      入浴（順番制）　服薬・相談支援他
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
-                      21:00
-                    </div>
-                    <div className="text-green-800 font-semibold text-lg md:text-xl">
-                      リビング・ダイニング閉所
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
-                      22:00
-                    </div>
-                    <div className="text-green-800 font-semibold text-lg md:text-xl">
-                      就寝　消灯
-                    </div>
-                  </div>
-                </div>
-
-                {/* イラスト配置エリア */}
-                <div className="absolute bottom-6 right-6 w-24 h-24 bg-white/50 rounded-full flex items-center justify-center shadow-sm">
-                  <FaBed className="text-5xl text-orange-500" />
-                </div>
-              </div>
-            </div>
-
-            {/* 画像エリア - 2つの画像を配置（ジグザグ・高さ合わせ） */}
-            <div className="w-full flex flex-col justify-between h-full py-2">
-              {/* 1 (Left) */}
-              <div className="w-3/4 self-start aspect-video bg-transparent rounded-3xl border-2 border-dashed border-gray-300 flex items-center justify-center">
-                <p className="text-gray-400 text-sm px-4 text-center">世話人と利用者の会話の様子1</p>
-              </div>
-
-              {/* 2 (Right) */}
-              <div className="w-3/4 self-end aspect-video bg-transparent rounded-3xl border-2 border-dashed border-gray-300 flex items-center justify-center">
-                <p className="text-gray-400 text-sm px-4 text-center">食事の様子</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 bg-gradient-to-br from-orange-100 to-orange-50 p-6 rounded-2xl border border-orange-200 shadow-sm">
-            <p className="text-gray-700 text-center leading-relaxed text-lg md:text-xl font-medium">
-              ※上記は一般的な流れです。利用者様の個別のニーズや日中活動の時間に合わせて柔軟に対応いたします。
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ご利用いただける主なサービス */}
-      <section id="services" className="py-12 px-6 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
-              ご利用いただける主なサービス
-            </h2>
-            <div className="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
-          </div>
-
-          {/* サービスカテゴリ */}
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* カード1: 生活・健康サポート */}
-            <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-6 border border-orange-200 shadow-lg">
-              <h3 className="text-2xl font-bold text-green-800 mb-4 text-center">
-                生活・健康サポート
-              </h3>
-
-              {/* イラスト配置エリア */}
-              {/* Icon Area */}
-              <div className="flex justify-center mb-6">
-                <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center shadow-sm">
-                  <FaHeart className="text-5xl text-orange-500" />
-                </div>
-              </div>
-
-              {/* サービスリスト */}
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-orange-500 text-xl mt-0.5">•</span>
-                  <span className="text-green-800 font-semibold text-lg">健康管理・金銭管理</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-orange-500 text-xl mt-0.5">•</span>
-                  <span className="text-green-800 font-semibold text-lg">服薬管理</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-orange-500 text-xl mt-0.5">•</span>
-                  <span className="text-green-800 font-semibold text-lg">食事の提供（朝・夕）</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* カード2: 相談・手続きサポート */}
-            <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-6 border border-orange-200 shadow-lg">
-              <h3 className="text-2xl font-bold text-green-800 mb-4 text-center">
-                相談・手続きサポート
-              </h3>
-
-              {/* イラスト配置エリア */}
-              {/* Icon Area */}
-              <div className="flex justify-center mb-6">
-                <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center shadow-sm">
-                  <FaFileAlt className="text-5xl text-orange-500" />
-                </div>
-              </div>
-
-              {/* サービスリスト */}
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-orange-500 text-xl mt-0.5">•</span>
-                  <span className="text-green-800 font-semibold text-lg">各種相談</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-orange-500 text-xl mt-0.5">•</span>
-                  <span className="text-green-800 font-semibold text-lg">行政関係他各種手続き支援</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-orange-500 text-xl mt-0.5">•</span>
-                  <span className="text-green-800 font-semibold text-lg">日中活動に伴う関係機関との連絡調整支援</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* カード3: 安心・交流 */}
-            <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-6 border border-orange-200 shadow-lg">
-              <h3 className="text-2xl font-bold text-green-800 mb-4 text-center">
-                安心・交流
-              </h3>
-
-              {/* イラスト配置エリア */}
-              {/* Icon Area */}
-              <div className="flex justify-center mb-6">
-                <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center shadow-sm">
-                  <FaHandshake className="text-5xl text-orange-500" />
-                </div>
-              </div>
-
-              {/* サービスリスト */}
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-orange-500 text-xl mt-0.5">•</span>
-                  <span className="text-green-800 font-semibold text-lg">緊急時の対応・地域交流支援・ご家族との連絡</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ご利用の流れ */}
-      <section id="flow" className="py-8 px-6 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-3">ご利用手続き（例）</h2>
-            <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
-          </div>
-
-          <div className="flex flex-col gap-4 mb-6 max-w-fit mx-auto">
-            {/* 1行目：1〜5（左から右） */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-2">
-              {/* 1 */}
-              <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
-                <div className="text-center w-full">
-                  <div className="text-base font-bold text-green-800">ご見学</div>
-                </div>
-              </div>
-
-              <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
-              <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
-
-              {/* 2 */}
-              <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
-                <div className="text-center w-full">
-                  <div className="text-base font-bold text-green-800">利用申し込み</div>
-                </div>
-              </div>
-
-              <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
-              <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
-
-              {/* 3 */}
-              <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
-                <div className="text-center w-full">
-                  <div className="text-base font-bold text-green-800">面談</div>
-                </div>
-              </div>
-
-              <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
-              <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
-
-              {/* 4 */}
-              <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
-                <div className="text-center w-full">
-                  <div className="text-base font-bold text-green-800">体験入居</div>
-                </div>
-              </div>
-
-              <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
-              <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
-
-              {/* 5 */}
-              <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
-                <div className="text-center w-full">
-                  <div className="text-base font-bold text-green-800">ご入居審査</div>
-                </div>
-              </div>
-            </div>
-
-            {/* 行間の矢印（デスクトップ：右端、モバイル：中央） */}
-            <div className="flex justify-center md:justify-end md:pr-8">
-              <i className="ri-arrow-down-line text-2xl text-orange-600"></i>
-            </div>
-
-            {/* 2行目：6〜10（右から左） */}
-            <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-2">
-              {/* 6 */}
-              <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
-                <div className="text-center w-full">
-                  <div className="text-base font-bold text-green-800">受給者証の申請</div>
-                </div>
-              </div>
-
-              <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
-              <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
-
-              {/* 7 */}
-              <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
-                <div className="text-center w-full">
-                  <div className="text-base font-bold text-green-800">支給決定</div>
-                </div>
-              </div>
-
-              <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
-              <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
-
-              {/* 8 */}
-              <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
-                <div className="text-center w-full">
-                  <div className="text-base font-bold text-green-800">利用契約</div>
-                </div>
-              </div>
-
-              <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
-              <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
-
-              {/* 9 */}
-              <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
-                <div className="text-center w-full">
-                  <div className="text-base font-bold text-green-800">入居準備</div>
-                </div>
-              </div>
-
-              <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
-              <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
-
-              {/* 10 */}
-              <div className="w-full md:w-auto bg-gradient-to-br from-orange-500 to-orange-600 px-3 py-3 rounded-xl shadow-sm border border-orange-600 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
-                <div className="text-center w-full">
-                  <div className="text-base font-bold text-white">ご入居</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="bg-gradient-to-br from-orange-100 to-orange-50 p-7 rounded-2xl border border-orange-200 shadow-sm">
-            <p className="text-gray-700 text-center leading-relaxed text-xl font-medium">※上記は一般的な流れです。詳細については、お気軽にお問い合わせください。</p>
-          </div>
-        </div>
-      </section>
-
-
-
       {/* 施設紹介ヘッダー */}
-      <section id="facility-intro" className="pt-24 pb-8 px-6 relative overflow-hidden">
+      <section
+        id="facility-intro"
+        className="pt-24 pb-8 px-6 relative overflow-hidden"
+      >
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
             施設紹介
@@ -1145,6 +772,422 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ごあいさつ */}
+      <section
+        id="about"
+        className="py-24 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("/葉っぱ画像③.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="max-w-7xl mx-auto relative">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
+              ごあいさつ
+            </h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
+          </div>
+          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+            <div className="order-2 lg:order-1 lg:col-span-1 h-full">
+              {/* 画像を配置するスペース（1/3） */}
+              <div className="w-full h-full bg-transparent rounded-3xl border-2 border-dashed border-gray-300 flex items-center justify-center min-h-[300px]">
+                <p className="text-gray-400 text-sm">画像を配置</p>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 lg:col-span-2">
+              <div className="bg-gradient-to-br from-orange-50 to-white p-8 md:p-10 rounded-3xl shadow-sm border border-orange-100 relative overflow-hidden">
+                <div className="space-y-4 text-xl md:text-2xl leading-relaxed text-gray-700">
+                  <p>
+                    私たちライフリスト株式会社は、静岡市を中心に地域密着型不動産賃貸業を運営しております。
+                  </p>
+                  <p>
+                    この度、静岡市駿河区敷地に障がいのある方のグループホーム「やすらぎの家」を開設する運びとなりました。「やすらぎの家」は障がいをお持ちで、将来は自立した生活を営みたいと希望される方が少人数での共同生活や地域社会との交流を通し、ここから新しいスタートを切るための障がい者支援施設として設立されたグループホーム（共同生活援助）です。利用者様はここで、当法人のスタッフと共同生活を営みながら、それぞれの個性を活かし安全・快適に暮らしていただく事ができます。
+                  </p>
+                  <p>
+                    私たちは、「やすらぎの家」で暮らす全ての利用者様、お一人おひとりの生活を尊重し、ここに暮らしながら、それぞれの「自立」の実現に向かう夢を、心を込めて支援させていただきます。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 1日の流れ */}
+      <section
+        id="daily-flow"
+        className="py-12 px-6 relative overflow-hidden min-h-screen flex items-center"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("/葉っぱ画像④.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="w-full max-w-7xl mx-auto relative">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
+              1日の大まかな流れ
+            </h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
+          </div>
+
+          <div className="w-full grid lg:grid-cols-2 gap-8 items-stretch">
+            {/* スケジュール */}
+            <div className="w-full">
+              <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-6 shadow-lg border border-orange-200 h-full relative">
+                <div className="space-y-2">
+                  <div className="flex items-center gap-4">
+                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
+                      6:30
+                    </div>
+                    <div className="text-green-800 font-semibold text-lg md:text-xl">
+                      リビング・ダイニング開散　起床支援
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4 relative">
+                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
+                      7:30
+                    </div>
+                    <div className="text-green-800 font-semibold text-lg md:text-xl">
+                      朝食（朝食提供）
+                    </div>
+                    {/* Breakfast Icon */}
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-24 h-24 bg-white/50 rounded-full flex items-center justify-center shadow-sm hidden md:flex">
+                      <BiBowlRice className="text-5xl text-orange-500" />
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
+                      9:00
+                    </div>
+                    <div className="text-green-800 font-semibold text-lg md:text-xl">
+                      出発（お見送り）
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-center py-6">
+                    <div className="text-green-800 font-semibold text-lg md:text-xl">
+                      ～日中通所先～
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
+                      16:00
+                    </div>
+                    <div className="text-green-800 font-semibold text-lg md:text-xl">
+                      帰宅
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
+                      18:00
+                    </div>
+                    <div className="text-green-800 font-semibold text-lg md:text-xl">
+                      夕食（夕食提供）
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
+                      19:00
+                    </div>
+                    <div className="text-green-800 font-semibold text-lg md:text-xl">
+                      入浴（順番制）　服薬・相談支援他
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
+                      21:00
+                    </div>
+                    <div className="text-green-800 font-semibold text-lg md:text-xl">
+                      リビング・ダイニング閉所
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
+                      22:00
+                    </div>
+                    <div className="text-green-800 font-semibold text-lg md:text-xl">
+                      就寝　消灯
+                    </div>
+                  </div>
+                </div>
+
+                {/* イラスト配置エリア */}
+                <div className="absolute bottom-6 right-6 w-24 h-24 bg-white/50 rounded-full flex items-center justify-center shadow-sm">
+                  <FaBed className="text-5xl text-orange-500" />
+                </div>
+              </div>
+            </div>
+
+            {/* 画像エリア - 2つの画像を配置（ジグザグ・高さ合わせ） */}
+            <div className="w-full flex flex-col justify-between h-full py-2">
+              {/* 1 (Left) */}
+              <div className="w-3/4 self-start aspect-video bg-transparent rounded-3xl border-2 border-dashed border-gray-300 flex items-center justify-center">
+                <p className="text-gray-400 text-sm px-4 text-center">世話人と利用者の会話の様子1</p>
+              </div>
+
+              {/* 2 (Right) */}
+              <div className="w-3/4 self-end aspect-video bg-transparent rounded-3xl border-2 border-dashed border-gray-300 flex items-center justify-center">
+                <p className="text-gray-400 text-sm px-4 text-center">食事の様子</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-gradient-to-br from-orange-100 to-orange-50 p-6 rounded-2xl border border-orange-200 shadow-sm">
+            <p className="text-gray-700 text-center leading-relaxed text-lg md:text-xl font-medium">
+              ※上記は一般的な流れです。利用者様の個別のニーズや日中活動の時間に合わせて柔軟に対応いたします。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* サービス・ご利用手続き（共通背景） */}
+      <div
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("/葉っぱ画像⑤.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* ご利用いただける主なサービス */}
+        <section
+          id="services"
+          className="py-12 px-6 relative"
+        >
+          <div className="max-w-7xl mx-auto relative">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
+                ご利用いただける主なサービス
+              </h2>
+              <div className="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+            </div>
+
+            {/* サービスカテゴリ */}
+            <div className="grid lg:grid-cols-3 gap-8">
+              {/* カード1: 生活・健康サポート */}
+              <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-6 border border-orange-200 shadow-lg">
+                <h3 className="text-2xl font-bold text-green-800 mb-4 text-center">
+                  生活・健康サポート
+                </h3>
+
+                {/* イラスト配置エリア */}
+                {/* Icon Area */}
+                <div className="flex justify-center mb-6">
+                  <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center shadow-sm">
+                    <FaHeart className="text-5xl text-orange-500" />
+                  </div>
+                </div>
+
+                {/* サービスリスト */}
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl mt-0.5">•</span>
+                    <span className="text-green-800 font-semibold text-lg">健康管理・金銭管理</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl mt-0.5">•</span>
+                    <span className="text-green-800 font-semibold text-lg">服薬管理</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl mt-0.5">•</span>
+                    <span className="text-green-800 font-semibold text-lg">食事の提供（朝・夕）</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* カード2: 相談・手続きサポート */}
+              <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-6 border border-orange-200 shadow-lg">
+                <h3 className="text-2xl font-bold text-green-800 mb-4 text-center">
+                  相談・手続きサポート
+                </h3>
+
+                {/* イラスト配置エリア */}
+                {/* Icon Area */}
+                <div className="flex justify-center mb-6">
+                  <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center shadow-sm">
+                    <FaFileAlt className="text-5xl text-orange-500" />
+                  </div>
+                </div>
+
+                {/* サービスリスト */}
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl mt-0.5">•</span>
+                    <span className="text-green-800 font-semibold text-lg">各種相談</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl mt-0.5">•</span>
+                    <span className="text-green-800 font-semibold text-lg">行政関係他各種手続き支援</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl mt-0.5">•</span>
+                    <span className="text-green-800 font-semibold text-lg">日中活動に伴う関係機関との連絡調整支援</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* カード3: 安心・交流 */}
+              <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-6 border border-orange-200 shadow-lg">
+                <h3 className="text-2xl font-bold text-green-800 mb-4 text-center">
+                  安心・交流
+                </h3>
+
+                {/* イラスト配置エリア */}
+                {/* Icon Area */}
+                <div className="flex justify-center mb-6">
+                  <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center shadow-sm">
+                    <FaHandshake className="text-5xl text-orange-500" />
+                  </div>
+                </div>
+
+                {/* サービスリスト */}
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl mt-0.5">•</span>
+                    <span className="text-green-800 font-semibold text-lg">緊急時の対応・地域交流支援・ご家族との連絡</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ご利用の流れ */}
+        <section
+          id="flow"
+          className="py-8 px-6 relative"
+        >
+          <div className="max-w-7xl mx-auto relative">
+            <div className="text-center mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-3">ご利用手続き（例）</h2>
+              <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
+            </div>
+
+            <div className="flex flex-col gap-4 mb-6 max-w-fit mx-auto">
+              {/* 1行目：1〜5（左から右） */}
+              <div className="flex flex-col md:flex-row items-center justify-center gap-2">
+                {/* 1 */}
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                  <div className="text-center w-full">
+                    <div className="text-base font-bold text-green-800">ご見学</div>
+                  </div>
+                </div>
+
+                <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
+                <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
+
+                {/* 2 */}
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                  <div className="text-center w-full">
+                    <div className="text-base font-bold text-green-800">利用申し込み</div>
+                  </div>
+                </div>
+
+                <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
+                <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
+
+                {/* 3 */}
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                  <div className="text-center w-full">
+                    <div className="text-base font-bold text-green-800">面談</div>
+                  </div>
+                </div>
+
+                <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
+                <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
+
+                {/* 4 */}
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                  <div className="text-center w-full">
+                    <div className="text-base font-bold text-green-800">体験入居</div>
+                  </div>
+                </div>
+
+                <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
+                <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
+
+                {/* 5 */}
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                  <div className="text-center w-full">
+                    <div className="text-base font-bold text-green-800">ご入居審査</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 行間の矢印（デスクトップ：右端、モバイル：中央） */}
+              <div className="flex justify-center md:justify-end md:pr-8">
+                <i className="ri-arrow-down-line text-2xl text-orange-600"></i>
+              </div>
+
+              {/* 2行目：6〜10（右から左） */}
+              <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-2">
+                {/* 6 */}
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                  <div className="text-center w-full">
+                    <div className="text-base font-bold text-green-800">受給者証の申請</div>
+                  </div>
+                </div>
+
+                <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
+                <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
+
+                {/* 7 */}
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                  <div className="text-center w-full">
+                    <div className="text-base font-bold text-green-800">支給決定</div>
+                  </div>
+                </div>
+
+                <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
+                <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
+
+                {/* 8 */}
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                  <div className="text-center w-full">
+                    <div className="text-base font-bold text-green-800">利用契約</div>
+                  </div>
+                </div>
+
+                <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
+                <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
+
+                {/* 9 */}
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                  <div className="text-center w-full">
+                    <div className="text-base font-bold text-green-800">入居準備</div>
+                  </div>
+                </div>
+
+                <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
+                <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
+
+                {/* 10 */}
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-500 to-orange-600 px-3 py-3 rounded-xl shadow-sm border border-orange-600 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                  <div className="text-center w-full">
+                    <div className="text-base font-bold text-white">ご入居</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-orange-100 to-orange-50 p-7 rounded-2xl border border-orange-200 shadow-sm">
+              <p className="text-gray-700 text-center leading-relaxed text-xl font-medium">※上記は一般的な流れです。詳細については、お気軽にお問い合わせください。</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+
       {/* 採用情報 */}
       <section id="recruit" className="py-16 px-6 relative overflow-hidden bg-orange-50">
         <div className="max-w-5xl mx-auto text-center">
@@ -1173,7 +1216,15 @@ export default function Home() {
       </section>
 
       {/* お問い合わせ */}
-      <section id="contact" className="py-24 px-6 relative overflow-hidden">
+      <section
+        id="contact"
+        className="py-24 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("/葉っぱ画像②.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="max-w-5xl mx-auto relative">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">
