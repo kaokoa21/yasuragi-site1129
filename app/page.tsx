@@ -234,8 +234,31 @@ export default function Home() {
                 </div>
               </button>
 
-              {/* Placeholder for 4th facility */}
-              <div className="w-full"></div>
+              <button
+                onClick={() => scrollToSection('nakada-detail')}
+                className="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm text-center flex flex-col hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                <div className="space-y-2 flex-1 w-full">
+                  <p className="text-xl font-bold text-green-800">やすらぎの家 中田</p>
+                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区中田1-9-21</p>
+
+                  <div className="bg-blue-600 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
+                    <p className="text-white text-lg font-bold">2026年4月OPEN予定！</p>
+                  </div>
+
+                  {/* Capacity Breakdown */}
+                  <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                      <span className="font-bold text-gray-700">本体</span>
+                      <span className="font-medium text-gray-600">定員5名</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 text-green-600 font-medium">
+                    <i className="ri-arrow-down-line text-lg"></i>
+                  </div>
+                </div>
+              </button>
             </div>
           </div>
         </div>
@@ -1025,6 +1048,95 @@ export default function Home() {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="プチ小鹿の地図"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 中田施設詳細 */}
+      <section id="nakada-detail" className="py-24 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 中田</h2>
+            <div className="bg-blue-600 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
+              <p className="text-white text-xl font-bold">2026年4月OPEN予定！</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 md:p-6 rounded-2xl border border-orange-100 shadow-sm mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+              {/* 外観写真 (Placeholder) */}
+              <div className="relative min-h-[200px] md:min-h-0 bg-gray-200 rounded-xl flex items-center justify-center">
+                <div className="text-center p-4">
+                  <i className="ri-building-line text-4xl text-gray-400 mb-2 block"></i>
+                  <span className="text-gray-500 font-bold">外観パース準備中</span>
+                </div>
+              </div>
+
+              {/* 施設概要 & 主な設備 (2カラムレイアウト) */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                {/* 左側: 施設概要テーブル */}
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">施設概要</h3>
+                  <table className="w-full text-gray-700 text-base mb-4">
+                    <tbody>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold w-1/3">定員</td>
+                        <td className="py-1">5名</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">開設年月</td>
+                        <td className="py-1">2026年4月予定</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* 主な設備 */}
+                <div className="bg-stone-50 rounded-xl p-4 h-full">
+                  <h4 className="text-sm font-bold text-green-800 mb-2 text-center">主な設備</h4>
+                  <p className="text-sm text-gray-500 text-center">準備中</p>
+                </div>
+              </div>
+
+              {/* 内観写真 (Placeholder) */}
+              <div className="relative min-h-[200px] md:min-h-0 bg-gray-200 rounded-xl flex items-center justify-center">
+                <div className="text-center p-4">
+                  <i className="ri-home-smile-line text-4xl text-gray-400 mb-2 block"></i>
+                  <span className="text-gray-500 font-bold">内観イメージ準備中</span>
+                </div>
+              </div>
+
+              {/* 利用料金 */}
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">利用料金</h3>
+                <p className="text-base text-gray-700 text-center md:text-left py-4">詳細が決まり次第、掲載いたします。</p>
+              </div>
+            </div>
+
+            {/* アクセス */}
+            <div className="mt-3 pt-3 border-t border-orange-200">
+              <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
+              <div className="grid lg:grid-cols-2 gap-3">
+                <div className="space-y-2 text-gray-700 text-base">
+                  <p><strong>住所：</strong>静岡市駿河区中田1-9-21</p>
+                  <p><strong>最寄り駅：</strong>JR東海道線「静岡駅」より徒歩13分</p>
+                  <p><strong>バス停：</strong>「中田三丁目」バス停より徒歩3分</p>
+                  <p><strong>周辺環境：</strong>住宅街、公園近く</p>
+                </div>
+                <div className="bg-gray-100 rounded-xl overflow-hidden">
+                  <iframe
+                    src="https://maps.google.com/maps?q=静岡市駿河区中田1-9-21&output=embed"
+                    width="100%"
+                    height="120"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="中田施設の地図"
                   ></iframe>
                 </div>
               </div>

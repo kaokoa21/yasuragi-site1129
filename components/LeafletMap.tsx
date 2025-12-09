@@ -26,6 +26,7 @@ export default function LeafletMap() {
     const shikiji: [number, number] = [34.9495, 138.4145];
     const sanbancho: [number, number] = [34.9761, 138.3683];
     const petitOga: [number, number] = [34.9731, 138.4221];
+    const nakada: [number, number] = [34.965484, 138.391963];
 
     return (
         <MapContainer
@@ -54,8 +55,15 @@ export default function LeafletMap() {
 
             <Marker position={petitOga} icon={customIcon}>
                 <Popup>
-                    <strong>プチメリル小鹿</strong><br />
+                    <strong>やすらぎの家 小鹿</strong><br />
                     静岡市駿河区小鹿2-39-1
+                </Popup>
+            </Marker>
+
+            <Marker position={nakada} icon={customIcon}>
+                <Popup>
+                    <strong>やすらぎの家 中田</strong><br />
+                    静岡市駿河区中田1-9-21
                 </Popup>
             </Marker>
         </MapContainer>
