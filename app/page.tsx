@@ -1213,13 +1213,12 @@ export default function Home() {
           </div>
 
           <div className="border-t border-green-700 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-              <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+              <div className="flex space-x-8">
                 <Link href="/privacy" className="text-green-300 hover:text-white transition-colors text-lg">プライバシーポリシー</Link>
                 <Link href="/terms" className="text-green-300 hover:text-white transition-colors text-lg">運営会社</Link>
-                <a href="https://readdy.ai/?origin=logo" target="_blank" rel="noopener noreferrer" className="text-green-300 hover:text-white transition-colors text-lg">Made with Readdy</a>
               </div>
-              <p className="text-green-300 text-lg">© 2024 やすらぎの家. All rights reserved.</p>
+              <p className="text-green-300 text-lg">© {new Date().getFullYear()} やすらぎの家. All rights reserved.</p>
             </div>
           </div>
         </div>
