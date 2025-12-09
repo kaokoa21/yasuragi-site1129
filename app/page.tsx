@@ -418,7 +418,7 @@ export default function Home() {
 
       {/* 三番町施設詳細 */}
       {/* 三番町施設詳細 */}
-      <section id="sanbancho-detail" className="py-24 px-6 relative overflow-hidden">
+      <section id="sanbancho-detail" className="py-12 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 三番町</h2>
@@ -549,7 +549,7 @@ export default function Home() {
 
       {/* プチ小鹿施設詳細 */}
       {/* プチ小鹿施設詳細 */}
-      <section id="petit-oga-detail" className="py-24 px-6 relative overflow-hidden">
+      <section id="petit-oga-detail" className="py-12 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 小鹿</h2>
@@ -679,7 +679,7 @@ export default function Home() {
       </section>
 
       {/* 中田施設詳細 */}
-      <section id="nakada-detail" className="py-24 px-6 relative overflow-hidden">
+      <section id="nakada-detail" className="py-12 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 中田</h2>
