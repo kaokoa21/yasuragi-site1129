@@ -50,11 +50,11 @@ export default function Home() {
             {/* デスクトップメニュー */}
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={() => scrollToSection('facilities')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">施設の空き状況</button>
+              <button onClick={() => scrollToSection('facility-intro')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">施設紹介</button>
               <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">ごあいさつ</button>
               <button onClick={() => scrollToSection('daily-flow')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">1日の流れ</button>
               <button onClick={() => scrollToSection('services')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">サービス</button>
               <button onClick={() => scrollToSection('flow')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">ご利用手続き</button>
-              <button onClick={() => scrollToSection('facility-intro')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">施設紹介</button>
               <button onClick={() => scrollToSection('recruit')} className="text-gray-600 hover:text-orange-500 font-medium text-lg transition-colors">採用情報</button>
               <button
                 onClick={() => scrollToSection('contact')}
@@ -82,11 +82,11 @@ export default function Home() {
           <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg animate-fade-in-down">
             <div className="px-6 py-4 space-y-4">
               <button onClick={() => scrollToSection('facilities')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">施設の空き状況</button>
+              <button onClick={() => scrollToSection('facility-intro')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">施設紹介</button>
               <button onClick={() => scrollToSection('about')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">ごあいさつ</button>
               <button onClick={() => scrollToSection('daily-flow')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">1日の流れ</button>
               <button onClick={() => scrollToSection('services')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">サービス</button>
               <button onClick={() => scrollToSection('flow')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">ご利用手続き</button>
-              <button onClick={() => scrollToSection('facility-intro')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">施設紹介</button>
               <button onClick={() => scrollToSection('recruit')} className="block w-full text-left py-3 text-gray-600 font-medium text-lg border-b border-gray-50">採用情報</button>
               <button
                 onClick={() => scrollToSection('contact')}
