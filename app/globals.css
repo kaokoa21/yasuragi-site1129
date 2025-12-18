@@ -44,3 +44,26 @@ body::after {
   z-index: -1;
   pointer-events: none;
 }
+
+/* Map Label Styling */
+/* Map Label Styling */
+.leaflet-tooltip.map-label {
+  background-color: white;
+  color: #006400;
+  /* Dark Green */
+  border: 1px solid #006400;
+  border-radius: 8px;
+  /* Slightly rounded */
+  padding: 4px 8px;
+  font-size: 13px;
+  /* 12-14px range */
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+  display: none !important;
+}

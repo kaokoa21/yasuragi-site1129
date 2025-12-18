@@ -1,6 +1,6 @@
 "use client";
 
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useEffect } from 'react';
@@ -17,6 +17,7 @@ const customIcon = new L.Icon({
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
+    tooltipAnchor: [1, -34], // Ensure tooltip appears above the icon
     shadowSize: [41, 41]
 });
 
@@ -40,31 +41,27 @@ export default function LeafletMap() {
             />
 
             <Marker position={shikiji} icon={customIcon}>
-                <Popup>
-                    <strong>やすらぎの家 敷地</strong><br />
-                    静岡市駿河区敷地2-26-2
-                </Popup>
+                <Tooltip permanent direction="top" className="map-label">
+                    <strong>やすらぎの家 敷地</strong>
+                </Tooltip>
             </Marker>
 
             <Marker position={sanbancho} icon={customIcon}>
-                <Popup>
-                    <strong>やすらぎの家 三番町</strong><br />
-                    静岡市葵区三番町23-6
-                </Popup>
+                <Tooltip permanent direction="top" className="map-label">
+                    <strong>やすらぎの家 三番町</strong>
+                </Tooltip>
             </Marker>
 
             <Marker position={petitOga} icon={customIcon}>
-                <Popup>
-                    <strong>やすらぎの家 小鹿</strong><br />
-                    静岡市駿河区小鹿2-39-1
-                </Popup>
+                <Tooltip permanent direction="top" className="map-label">
+                    <strong>やすらぎの家 小鹿</strong>
+                </Tooltip>
             </Marker>
 
             <Marker position={nakada} icon={customIcon}>
-                <Popup>
-                    <strong>やすらぎの家 中田</strong><br />
-                    静岡市駿河区中田1-9-21
-                </Popup>
+                <Tooltip permanent direction="top" className="map-label">
+                    <strong>やすらぎの家 中田</strong>
+                </Tooltip>
             </Marker>
         </MapContainer>
     );

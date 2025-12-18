@@ -103,7 +103,7 @@ export default function Home() {
       <section className="relative bg-gradient-to-br from-orange-100 via-orange-50 to-yellow-50 py-16 px-6 md:py-24 mt-16 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url("/ヒーロー画像②.png")' }}
+          style={{ backgroundImage: 'url("/ヒーロー画像③.png")', backgroundPosition: 'calc(50% - 120px) center' }}
         ></div>
         <div className="absolute inset-0 bg-white/60"></div>
         <div className="relative max-w-7xl mx-auto z-10">
@@ -153,26 +153,52 @@ export default function Home() {
             {/* Cards List - Right on PC, Bottom on Mobile */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <button
-                onClick={() => scrollToSection('shikiji-detail')}
+                onClick={() => scrollToSection('nakada-detail')}
                 className="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm text-center flex flex-col hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
               >
                 <div className="space-y-2 flex-1 w-full">
-                  <p className="text-xl font-bold text-green-800">やすらぎの家 敷地</p>
-                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区敷地2-26-2 左京ビル201</p>
+                  <p className="text-xl font-bold text-green-800">やすらぎの家 中田</p>
+                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区中田1-9-21</p>
 
-                  <div className="bg-orange-500 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
-                    <p className="text-white text-2xl font-bold">残り1室</p>
+                  <div className="bg-blue-600 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
+                    <p className="text-white text-lg font-bold">2026年4月OPEN予定！</p>
                   </div>
 
                   {/* Capacity Breakdown */}
                   <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
                     <div className="flex justify-between items-center border-b border-gray-200 pb-2">
                       <span className="font-bold text-gray-700">本体</span>
-                      <span className="font-medium text-gray-600">定員5名 (<span className="text-red-600 font-bold">入居4名</span>)</span>
+                      <span className="font-medium text-gray-600">定員5名</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 text-green-600 font-medium">
+                    <i className="ri-arrow-down-line text-lg"></i>
+                  </div>
+                </div>
+              </button>
+
+              <button
+                onClick={() => scrollToSection('petit-oga-detail')}
+                className="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm text-center flex flex-col hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                <div className="space-y-2 flex-1 w-full">
+                  <p className="text-xl font-bold text-green-800">やすらぎの家 小鹿</p>
+                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区小鹿2-39-1 プチ小鹿</p>
+
+                  <div className="bg-orange-500 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
+                    <p className="text-white text-2xl font-bold">残り2室</p>
+                  </div>
+
+                  {/* Capacity Breakdown */}
+                  <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-2">
+                      <span className="font-bold text-gray-700">本体</span>
+                      <span className="font-medium text-gray-600">定員6名 (<span className="text-red-600 font-bold">入居4名</span>)</span>
                     </div>
                     <div className="flex justify-between items-center pt-1">
                       <span className="font-bold text-gray-700">サテライト</span>
-                      <span className="font-medium text-gray-600">定員2名 (入居2名)</span>
+                      <span className="font-medium text-gray-600">定員2名 (入居0名)</span>
                     </div>
                   </div>
 
@@ -213,52 +239,26 @@ export default function Home() {
               </button>
 
               <button
-                onClick={() => scrollToSection('petit-oga-detail')}
+                onClick={() => scrollToSection('shikiji-detail')}
                 className="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm text-center flex flex-col hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
               >
                 <div className="space-y-2 flex-1 w-full">
-                  <p className="text-xl font-bold text-green-800">やすらぎの家 小鹿</p>
-                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区小鹿2-39-1 プチ小鹿</p>
+                  <p className="text-xl font-bold text-green-800">やすらぎの家 敷地</p>
+                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区敷地2-26-2 左京ビル201</p>
 
-                  <div className="bg-orange-500 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
-                    <p className="text-white text-2xl font-bold">残り4室</p>
+                  <div className="bg-gray-400 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
+                    <p className="text-white text-2xl font-bold">満室</p>
                   </div>
 
                   {/* Capacity Breakdown */}
                   <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
                     <div className="flex justify-between items-center border-b border-gray-200 pb-2">
                       <span className="font-bold text-gray-700">本体</span>
-                      <span className="font-medium text-gray-600">定員6名 (<span className="text-red-600 font-bold">入居4名</span>)</span>
+                      <span className="font-medium text-gray-600">定員5名 (入居5名)</span>
                     </div>
                     <div className="flex justify-between items-center pt-1">
                       <span className="font-bold text-gray-700">サテライト</span>
-                      <span className="font-medium text-gray-600">定員2名 (<span className="text-red-600 font-bold">入居0名</span>)</span>
-                    </div>
-                  </div>
-
-                  <div className="mt-4 text-green-600 font-medium">
-                    <i className="ri-arrow-down-line text-lg"></i>
-                  </div>
-                </div>
-              </button>
-
-              <button
-                onClick={() => scrollToSection('nakada-detail')}
-                className="bg-white p-7 rounded-3xl border border-gray-200 shadow-sm text-center flex flex-col hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
-              >
-                <div className="space-y-2 flex-1 w-full">
-                  <p className="text-xl font-bold text-green-800">やすらぎの家 中田</p>
-                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区中田1-9-21</p>
-
-                  <div className="bg-blue-600 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
-                    <p className="text-white text-lg font-bold">2026年4月OPEN予定！</p>
-                  </div>
-
-                  {/* Capacity Breakdown */}
-                  <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
-                    <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                      <span className="font-bold text-gray-700">本体</span>
-                      <span className="font-medium text-gray-600">定員5名</span>
+                      <span className="font-medium text-gray-600">定員2名 (入居2名)</span>
                     </div>
                   </div>
 
@@ -282,404 +282,6 @@ export default function Home() {
             施設紹介
           </h2>
           <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
-        </div>
-      </section>
-
-      {/* 左京ビル施設詳細 */}
-      <section id="shikiji-detail" className="py-12 px-6 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto relative">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 敷地</h2>
-            <div className="bg-orange-500 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
-              <p className="text-white text-2xl font-bold">残り1室</p>
-            </div>
-          </div>
-
-          {/* 統合されたブロック - 施設概要とアクセスをぎゅっと詰める */}
-          <div className="bg-white p-4 md:p-6 rounded-2xl border border-orange-100 shadow-sm mb-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-              {/* 外観写真 */}
-              <div className="relative min-h-[200px] md:min-h-0">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Modern%20apartment%20building%20housing%20group%20home%20facility%2C%20multi-story%20residential%20complex%20with%20accessible%20entrance%2C%20clean%20contemporary%20architecture%2C%20urban%20setting%20with%20parking%20area%20and%20landscaping&width=600&height=400&seq=shikiji-exterior-main&orientation=landscape"
-                  alt="敷地施設 外観"
-                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
-                />
-              </div>
-
-              {/* 施設概要 & 主な設備 (2カラムレイアウト) */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                {/* 左側: 施設概要テーブル */}
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">施設概要</h3>
-                  <table className="w-full text-gray-700 text-base mb-4">
-                    <tbody>
-                      <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold w-1/3">定員</td>
-                        <td className="py-1">5名</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold">居室数</td>
-                        <td className="py-1">6畳5室</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold">建物構造</td>
-                        <td className="py-1">木造2階建 2階</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold">開設年月</td>
-                        <td className="py-1">2022年1月</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* 主な設備 */}
-                <div className="bg-stone-50 rounded-xl p-4 h-full">
-                  <h4 className="text-sm font-bold text-green-800 mb-2 text-center">主な設備</h4>
-                  <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
-                    <li>全室個室（各個室）</li>
-                    <li>各居室にエアコン、ベッド</li>
-                    <li>布団一式、カーテン、照明完備</li>
-                    <li>トイレ、浴室、洗面、洗濯機</li>
-                    <li>冷蔵庫、WiFi完備（共有）</li>
-                    <li>二重窓、防音壁で防音効果を強化</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* 内観写真 */}
-              <div className="relative min-h-[200px] md:min-h-0">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Modern%20group%20home%20living%20room%20with%20comfortable%20furniture%2C%20accessible%20design%2C%20bright%20natural%20lighting%2C%20communal%20seating%20area%2C%20clean%20and%20welcoming%20interior%20space%20for%20residents%20with%20disabilities&width=600&height=400&seq=shikiji-interior-main&orientation=landscape"
-                  alt="敷地施設 内観"
-                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
-                />
-              </div>
-
-              {/* 利用料金 */}
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">利用料金</h3>
-                <table className="w-full text-gray-700 text-base">
-                  <tbody>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1 font-semibold">月額利用料</td>
-                      <td className="py-1 text-right font-bold">68,000円</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1 font-semibold pl-4 text-sm">家賃</td>
-                      <td className="py-1 text-right text-sm">28,000円</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1 font-semibold pl-4 text-sm">食費</td>
-                      <td className="py-1 text-right text-sm">25,000円</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1 font-semibold pl-4 text-sm">水道光熱費</td>
-                      <td className="py-1 text-right text-sm">12,000円</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1 font-semibold pl-4 text-sm">日用品費</td>
-                      <td className="py-1 text-right text-sm">3,000円</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p className="text-xs text-gray-500 mt-2">
-                  国の家賃補助利用で上記金額より10,000円/月引かれます。<br />
-                  ※体験利用1泊2食/2,500円（日数、回数はご相談ください）<br />
-                  ※各市町村に助成制度がありますので、各自治体にご確認ください。
-                </p>
-              </div>
-            </div>
-
-            {/* アクセス情報を施設概要ブロック内に追加 */}
-            <div className="mt-3 pt-3 border-t border-orange-200">
-              <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
-              <div className="grid lg:grid-cols-2 gap-3">
-                <div className="space-y-2 text-gray-700 text-base">
-                  <p><strong>住所：</strong>静岡市駿河区敷地2-26-2 左京ビル201</p>
-                  <p><strong>最寄り駅：</strong>JR東海道線「静岡駅」より徒歩15分</p>
-                  <p><strong>バス停：</strong>「敷地」バス停より徒歩3分</p>
-                  <p><strong>駐車場：</strong>あり（4台分）</p>
-                  <p><strong>周辺環境：</strong>住宅街、商業施設・医療機関が近隣</p>
-                </div>
-                <div className="bg-gray-100 rounded-xl overflow-hidden">
-                  <iframe
-                    src="https://maps.google.com/maps?q=静岡市駿河区敷地2-26-2&output=embed"
-                    width="100%"
-                    height="120"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="敷地施設の地図"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 三番町施設詳細 */}
-      {/* 三番町施設詳細 */}
-      <section id="sanbancho-detail" className="py-12 px-6 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto relative">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 三番町</h2>
-            <div className="bg-gray-400 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
-              <p className="text-white text-2xl font-bold">満室</p>
-            </div>
-          </div>
-
-          <div className="bg-white p-4 md:p-6 rounded-2xl border border-orange-100 shadow-sm mb-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-              {/* 外観写真 */}
-              <div className="relative min-h-[200px] md:min-h-0">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Urban%20group%20home%20building%20in%20city%20center%2C%20modern%20multi-story%20residential%20facility%2C%20accessible%20entrance%20with%20ramp%2C%20clean%20contemporary%20design%2C%20well-maintained%20urban%20setting%20with%20street%20access&width=600&height=400&seq=sanbancho-exterior-main&orientation=landscape"
-                  alt="三番町施設 外観"
-                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
-                />
-              </div>
-
-              {/* 施設概要 & 主な設備 (2カラムレイアウト) */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                {/* 左側: 施設概要テーブル */}
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">施設概要</h3>
-                  <table className="w-full text-gray-700 text-base mb-4">
-                    <tbody>
-                      <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold w-1/3">定員</td>
-                        <td className="py-1">6名</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold">居室数</td>
-                        <td className="py-1">6畳6室</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold">建物構造</td>
-                        <td className="py-1">鉄筋コンクリート造3階建て</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold">開設年月</td>
-                        <td className="py-1">2022年10月</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* 主な設備 */}
-                <div className="bg-stone-50 rounded-xl p-4 h-full">
-                  <h4 className="text-sm font-bold text-green-800 mb-2 text-center">主な設備</h4>
-                  <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
-                    <li>全室個室（各個室）</li>
-                    <li>各居室にエアコン、ベッド</li>
-                    <li>布団一式、カーテン、照明完備</li>
-                    <li>トイレ、浴室、洗面、洗濯機</li>
-                    <li>冷蔵庫、WiFi完備（共有）</li>
-                    <li>二重窓、防音壁で防音効果を強化</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* 内観写真 */}
-              <div className="relative min-h-[200px] md:min-h-0">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Spacious%20group%20home%20common%20area%20with%20comfortable%20seating%2C%20modern%20interior%20design%2C%20accessible%20layout%2C%20natural%20lighting%2C%20welcoming%20community%20space%20for%20residents%20and%20staff%20interaction&width=600&height=400&seq=sanbancho-interior-main&orientation=landscape"
-                  alt="三番町施設 内観"
-                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
-                />
-              </div>
-
-              {/* 利用料金 */}
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">利用料金</h3>
-                <table className="w-full text-gray-700 text-base">
-                  <tbody>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1 font-semibold">月額利用料</td>
-                      <td className="py-1 text-right font-bold">68,000円</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1">家賃</td>
-                      <td className="py-1 text-right">28,000円</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1">食費</td>
-                      <td className="py-1 text-right">25,000円</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1">水道光熱費</td>
-                      <td className="py-1 text-right">12,000円</td>
-                    </tr>
-                    <tr>
-                      <td className="py-1">日用品費</td>
-                      <td className="py-1 text-right">3,000円</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            {/* アクセス */}
-            <div className="mt-3 pt-3 border-t border-orange-200">
-              <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
-              <div className="grid lg:grid-cols-2 gap-3">
-                <div className="space-y-2 text-gray-700 text-base">
-                  <p><strong>住所：</strong>静岡市葵区三番町23-6</p>
-                  <p><strong>最寄り駅：</strong>JR東海道線「静岡駅」より徒歩12分</p>
-                  <p><strong>バス停：</strong>「三番町」バス停より徒歩2分</p>
-                  <p><strong>駐車場：</strong>あり（2台分）</p>
-                  <p><strong>周辺環境：</strong>市街地中心部、商業施設・医療機関が充実</p>
-                </div>
-                <div className="bg-gray-100 rounded-xl overflow-hidden">
-                  <iframe
-                    src="https://maps.google.com/maps?q=静岡市葵区三番町23-6&output=embed"
-                    width="100%"
-                    height="120"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="三番町施設の地図"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* プチ小鹿施設詳細 */}
-      {/* プチ小鹿施設詳細 */}
-      <section id="petit-oga-detail" className="py-12 px-6 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto relative">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 小鹿</h2>
-            <div className="bg-orange-500 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
-              <p className="text-white text-2xl font-bold">残り4室</p>
-            </div>
-          </div>
-
-          <div className="bg-white p-4 md:p-6 rounded-2xl border border-orange-100 shadow-sm mb-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-              {/* 外観写真 */}
-              <div className="relative min-h-[200px] md:min-h-0">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Modern%20Japanese%20group%20home%20exterior%20building%20facade%2C%20two-story%20residential%20building%20with%20accessible%20entrance%2C%20clean%20contemporary%20architecture%2C%20well-maintained%20garden%20and%20parking%20area%2C%20welcoming%20community%20facility%20design&width=600&height=400&seq=petit-oga-exterior-main&orientation=landscape"
-                  alt="プチ小鹿 外観"
-                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
-                />
-              </div>
-
-              {/* 施設概要 & 主な設備 (2カラムレイアウト) */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                {/* 左側: 施設概要テーブル */}
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">施設概要</h3>
-                  <table className="w-full text-gray-700 text-base mb-4">
-                    <tbody>
-                      <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold w-1/3">定員</td>
-                        <td className="py-1">6名</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold">居室数</td>
-                        <td className="py-1">6畳6室</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold">建物構造</td>
-                        <td className="py-1">木造2階建て</td>
-                      </tr>
-                      <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold">開設年月</td>
-                        <td className="py-1">2023年4月</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* 主な設備 */}
-                <div className="bg-stone-50 rounded-xl p-4 h-full">
-                  <h4 className="text-sm font-bold text-green-800 mb-2 text-center">主な設備</h4>
-                  <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
-                    <li>全室個室（各個室）</li>
-                    <li>各居室にエアコン、ベッド</li>
-                    <li>布団一式、カーテン、照明完備</li>
-                    <li>トイレ、浴室、洗面、洗濯機</li>
-                    <li>冷蔵庫、WiFi完備（共有）</li>
-                    <li>二重窓、防音壁で防音効果を強化</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* 内観写真 */}
-              <div className="relative min-h-[200px] md:min-h-0">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Comfortable%20group%20home%20living%20room%20with%20modern%20furniture%2C%20accessible%20design%2C%20warm%20lighting%2C%20communal%20seating%20area%2C%20clean%20and%20welcoming%20interior%20space%20for%20residents%20with%20disabilities&width=600&height=400&seq=petit-oga-interior-main&orientation=landscape"
-                  alt="プチ小鹿 内観"
-                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
-                />
-              </div>
-
-              {/* 利用料金 */}
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">利用料金</h3>
-                <table className="w-full text-gray-700 text-base">
-                  <tbody>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1 font-semibold">月額利用料</td>
-                      <td className="py-1 text-right font-bold">68,000円</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1">家賃</td>
-                      <td className="py-1 text-right">28,000円</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1">食費</td>
-                      <td className="py-1 text-right">25,000円</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-1">水道光熱費</td>
-                      <td className="py-1 text-right">12,000円</td>
-                    </tr>
-                    <tr>
-                      <td className="py-1">日用品費</td>
-                      <td className="py-1 text-right">3,000円</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            {/* アクセス */}
-            <div className="mt-3 pt-3 border-t border-orange-200">
-              <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
-              <div className="grid lg:grid-cols-2 gap-3">
-                <div className="space-y-2 text-gray-700 text-base">
-                  <p><strong>住所：</strong>静岡市駿河区小鹿886　プチ小鹿</p>
-                  <p><strong>最寄り駅：</strong>JR東海道線「静岡駅」よりバス15分</p>
-                  <p><strong>バス停：</strong>「小鹿」バス停より徒歩3分</p>
-                  <p><strong>駐車場：</strong>あり（3台分）</p>
-                  <p><strong>周辺環境：</strong>住宅街、自然豊かな環境</p>
-                </div>
-                <div className="bg-gray-100 rounded-xl overflow-hidden">
-                  <iframe
-                    src="https://maps.google.com/maps?q=静岡市駿河区小鹿886　プチ小鹿&output=embed"
-                    width="100%"
-                    height="120"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="プチ小鹿の地図"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -749,21 +351,429 @@ export default function Home() {
               <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
               <div className="grid lg:grid-cols-2 gap-3">
                 <div className="space-y-2 text-gray-700 text-base">
+                  <p><strong>バス：</strong>「中田三丁目」バス停より徒歩3分</p>
+                  <p><strong>近隣施設：</strong>住宅街、公園近く</p>
                   <p><strong>住所：</strong>静岡市駿河区中田1-9-21</p>
-                  <p><strong>最寄り駅：</strong>JR東海道線「静岡駅」より徒歩13分</p>
-                  <p><strong>バス停：</strong>「中田三丁目」バス停より徒歩3分</p>
-                  <p><strong>周辺環境：</strong>住宅街、公園近く</p>
                 </div>
-                <div className="bg-gray-100 rounded-xl overflow-hidden">
+                <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
                   <iframe
-                    src="https://maps.google.com/maps?q=静岡市駿河区中田1-9-21&output=embed"
-                    width="100%"
-                    height="120"
+                    src="https://maps.google.com/maps?q=34.965484,138.391963&output=embed"
+                    width="80%"
+                    height="200"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="中田施設の地図"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* プチ小鹿施設詳細 */}
+      <section id="petit-oga-detail" className="py-12 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 小鹿</h2>
+            <div className="bg-orange-500 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
+              <p className="text-white text-2xl font-bold">残り2室</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 md:p-6 rounded-2xl border border-orange-100 shadow-sm mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+              {/* 外観写真 */}
+              <div className="relative min-h-[200px] md:min-h-0">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Modern%20Japanese%20group%20home%20exterior%20building%20facade%2C%20two-story%20residential%20building%20with%20accessible%20entrance%2C%20clean%20contemporary%20architecture%2C%20well-maintained%20garden%20and%20parking%20area%2C%20welcoming%20community%20facility%20design&width=600&height=400&seq=petit-oga-exterior-main&orientation=landscape"
+                  alt="プチ小鹿 外観"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
+                />
+              </div>
+
+              {/* 施設概要 & 主な設備 (2カラムレイアウト) */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                {/* 左側: 施設概要テーブル */}
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">施設概要</h3>
+                  <table className="w-full text-gray-700 text-base mb-4">
+                    <tbody>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold w-1/3">定員</td>
+                        <td className="py-1">6名</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">居室数</td>
+                        <td className="py-1">6畳＋ロフト（３畳）、6室</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">建物構造</td>
+                        <td className="py-1">木造2階建て</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">開設年月</td>
+                        <td className="py-1">2024年11月</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* 主な設備 */}
+                <div className="bg-stone-50 rounded-xl p-4 h-full">
+                  <h4 className="text-sm font-bold text-green-800 mb-2 text-center">主な設備</h4>
+                  <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
+                    <li>全室個室（各個室）</li>
+                    <li>各居室にエアコン、ベッド</li>
+                    <li>布団一式、カーテン、照明完備</li>
+                    <li>トイレ、浴室、洗面、洗濯機</li>
+                    <li>冷蔵庫、WiFi完備（共有）</li>
+                    <li>二重窓、防音壁で防音効果を強化</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* 内観写真 */}
+              <div className="relative min-h-[200px] md:min-h-0">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Comfortable%20group%20home%20living%20room%20with%20modern%20furniture%2C%20accessible%20design%2C%20warm%20lighting%2C%20communal%20seating%20area%2C%20clean%20and%20welcoming%20interior%20space%20for%20residents%20with%20disabilities&width=600&height=400&seq=petit-oga-interior-main&orientation=landscape"
+                  alt="プチ小鹿 内観"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
+                />
+              </div>
+
+              {/* 利用料金 */}
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">利用料金</h3>
+                <div className="w-full max-w-sm mx-auto md:mx-0">
+                  <table className="w-full text-gray-700 text-lg">
+                    <tbody>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">月額利用料</td>
+                        <td className="py-1 text-right font-bold">68,000円</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold pl-4 text-sm">家賃</td>
+                        <td className="py-1 text-right text-sm">28,000円</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold pl-4 text-sm">食費</td>
+                        <td className="py-1 text-right text-sm">25,000円</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold pl-4 text-sm">水道光熱費</td>
+                        <td className="py-1 text-right text-sm">12,000円</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold pl-4 text-sm">日用品費</td>
+                        <td className="py-1 text-right text-sm">3,000円</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p className="text-xs text-gray-500 mt-2">
+                    国の家賃補助利用で上記金額より10,000円/月引かれます。<br />
+                    ※体験利用1泊2食/2,500円（日数、回数はご相談ください）<br />
+                    ※各市町村に助成制度がありますので、各自治体にご確認ください。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* アクセス */}
+            <div className="mt-3 pt-3 border-t border-orange-200">
+              <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
+              <div className="grid lg:grid-cols-2 gap-3">
+                <div className="space-y-2 text-gray-700 text-base">
+                  <p><strong>バス：</strong>静岡駅南口より静鉄バス２１番のりばみなみ線乗車約16分<br />　　　　　『小鹿営業所』バス停下車、徒歩約４分</p>
+                  <p><strong>駐車場：</strong>あり（２台分）</p>
+                  <p><strong>近隣施設：</strong>セブンイレブン　徒歩７分<br />　　　　　杏林堂静岡小鹿店　徒歩４分</p>
+                  <p><strong>住所：</strong>静岡市駿河区小鹿886　プチ小鹿</p>
+                </div>
+                <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
+                  <iframe
+                    src="https://maps.google.com/maps?q=34.9731,138.4221&output=embed"
+                    width="80%"
+                    height="200"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="プチ小鹿の地図"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 三番町施設詳細 */}
+      <section id="sanbancho-detail" className="py-12 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 三番町</h2>
+            <div className="bg-gray-400 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
+              <p className="text-white text-2xl font-bold">満室</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 md:p-6 rounded-2xl border border-orange-100 shadow-sm mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+              {/* 外観写真 */}
+              <div className="relative min-h-[200px] md:min-h-0">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Urban%20group%20home%20building%20in%20city%20center%2C%20modern%20multi-story%20residential%20facility%2C%20accessible%20entrance%20with%20ramp%2C%20clean%20contemporary%20design%2C%20well-maintained%20urban%20setting%20with%20street%20access&width=600&height=400&seq=sanbancho-exterior-main&orientation=landscape"
+                  alt="三番町施設 外観"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
+                />
+              </div>
+
+              {/* 施設概要 & 主な設備 (2カラムレイアウト) */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                {/* 左側: 施設概要テーブル */}
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">施設概要</h3>
+                  <table className="w-full text-gray-700 text-base mb-4">
+                    <tbody>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold w-1/3">定員</td>
+                        <td className="py-1">6名</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">居室数</td>
+                        <td className="py-1">6畳～10畳、6室</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">建物構造</td>
+                        <td className="py-1">鉄骨造３階建て</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">開設年月</td>
+                        <td className="py-1">2023年4月</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* 主な設備 */}
+                <div className="bg-stone-50 rounded-xl p-4 h-full">
+                  <h4 className="text-sm font-bold text-green-800 mb-2 text-center">主な設備</h4>
+                  <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
+                    <li>全室個室（各個室）</li>
+                    <li>各居室にエアコン、ベッド</li>
+                    <li>布団一式、カーテン、照明完備</li>
+                    <li>トイレ、浴室、洗面、洗濯機</li>
+                    <li>冷蔵庫、WiFi完備（共有）</li>
+                    <li>二重窓、防音壁で防音効果を強化</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* 内観写真 */}
+              <div className="relative min-h-[200px] md:min-h-0">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Spacious%20group%20home%20common%20area%20with%20comfortable%20seating%2C%20modern%20interior%20design%2C%20accessible%20layout%2C%20natural%20lighting%2C%20welcoming%20community%20space%20for%20residents%20and%20staff%20interaction&width=600&height=400&seq=sanbancho-interior-main&orientation=landscape"
+                  alt="三番町施設 内観"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
+                />
+              </div>
+
+              {/* 利用料金 */}
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">利用料金</h3>
+                <div className="w-full max-w-sm mx-auto md:mx-0">
+                  <table className="w-full text-gray-700 text-lg">
+                    <tbody>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">月額利用料</td>
+                        <td className="py-1 text-right font-bold">68,000円</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold pl-4 text-sm">家賃</td>
+                        <td className="py-1 text-right text-sm">28,000円</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold pl-4 text-sm">食費</td>
+                        <td className="py-1 text-right text-sm">25,000円</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold pl-4 text-sm">水道光熱費</td>
+                        <td className="py-1 text-right text-sm">12,000円</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold pl-4 text-sm">日用品費</td>
+                        <td className="py-1 text-right text-sm">3,000円</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p className="text-xs text-gray-500 mt-2">
+                    国の家賃補助利用で上記金額より10,000円/月引かれます。<br />
+                    ※体験利用1泊2食/2,500円（日数、回数はご相談ください）<br />
+                    ※各市町村に助成制度がありますので、各自治体にご確認ください。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* アクセス */}
+            <div className="mt-3 pt-3 border-t border-orange-200">
+              <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
+              <div className="grid lg:grid-cols-2 gap-3">
+                <div className="space-y-2 text-gray-700 text-base">
+                  <p><strong>バス：</strong>静岡駅前より静鉄バス３番のりば藁科線乗車約10分<br />　　　　　『安西四丁目』バス停下車、徒歩約３分</p>
+                  <p><strong>駐車場：</strong>あり（２台分）</p>
+                  <p><strong>近隣施設：</strong>セブンイレブン　徒歩４分<br />　　　　　ウエルシア静岡柳町店　徒歩８分</p>
+                  <p><strong>住所：</strong>静岡市葵区三番町23-6</p>
+                </div>
+                <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
+                  <iframe
+                    src="https://maps.google.com/maps?q=34.9761,138.3683&output=embed"
+                    width="80%"
+                    height="200"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="三番町施設の地図"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 左京ビル施設詳細 */}
+      <section id="shikiji-detail" className="py-12 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 敷地</h2>
+            <div className="bg-gray-400 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
+              <p className="text-white text-2xl font-bold">満室</p>
+            </div>
+          </div>
+
+          {/* 統合されたブロック - 施設概要とアクセスをぎゅっと詰める */}
+          <div className="bg-white p-4 md:p-6 rounded-2xl border border-orange-100 shadow-sm mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+              {/* 外観写真 */}
+              <div className="relative min-h-[200px] md:min-h-0">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Modern%20apartment%20building%20housing%20group%20home%20facility%2C%20multi-story%20residential%20complex%20with%20accessible%20entrance%2C%20clean%20contemporary%20architecture%2C%20urban%20setting%20with%20parking%20area%20and%20landscaping&width=600&height=400&seq=shikiji-exterior-main&orientation=landscape"
+                  alt="敷地施設 外観"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
+                />
+              </div>
+
+              {/* 施設概要 & 主な設備 (2カラムレイアウト) */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                {/* 左側: 施設概要テーブル */}
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">施設概要</h3>
+                  <table className="w-full text-gray-700 text-base mb-4">
+                    <tbody>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold w-1/3">定員</td>
+                        <td className="py-1">5名</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">居室数</td>
+                        <td className="py-1">6畳5室</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">建物構造</td>
+                        <td className="py-1">木造2階建 2階</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">開設年月</td>
+                        <td className="py-1">2022年1月</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* 主な設備 */}
+                <div className="bg-stone-50 rounded-xl p-4 h-full">
+                  <h4 className="text-sm font-bold text-green-800 mb-2 text-center">主な設備</h4>
+                  <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
+                    <li>全室【鍵付き】個室</li>
+                    <li>各居室にエアコン、ベッド</li>
+                    <li>布団一式、カーテン、照明完備</li>
+                    <li>トイレ、浴室、洗面、洗濯機</li>
+                    <li>冷蔵庫、WiFi完備（共有）</li>
+                    <li>二重窓、防音壁で防音効果を強化</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* 内観写真 */}
+              <div className="relative min-h-[200px] md:min-h-0">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Modern%20group%20home%20living%20room%20with%20comfortable%20furniture%2C%20accessible%20design%2C%20bright%20natural%20lighting%2C%20communal%20seating%20area%2C%20clean%20and%20welcoming%20interior%20space%20for%20residents%20with%20disabilities&width=600&height=400&seq=shikiji-interior-main&orientation=landscape"
+                  alt="敷地施設 内観"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg"
+                />
+              </div>
+
+              {/* 利用料金 */}
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-green-800 mb-2 text-center md:text-left">利用料金</h3>
+                <div className="w-full max-w-sm mx-auto md:mx-0">
+                  <table className="w-full text-gray-700 text-lg">
+                    <tbody>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold">月額利用料</td>
+                        <td className="py-1 text-right font-bold">68,000円</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold pl-4 text-sm">家賃</td>
+                        <td className="py-1 text-right text-sm">28,000円</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold pl-4 text-sm">食費</td>
+                        <td className="py-1 text-right text-sm">25,000円</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold pl-4 text-sm">水道光熱費</td>
+                        <td className="py-1 text-right text-sm">12,000円</td>
+                      </tr>
+                      <tr className="border-b border-gray-200">
+                        <td className="py-1 font-semibold pl-4 text-sm">日用品費</td>
+                        <td className="py-1 text-right text-sm">3,000円</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-xs text-gray-500 mt-2">
+                  国の家賃補助利用で上記金額より10,000円/月引かれます。<br />
+                  ※体験利用1泊2食/2,500円（日数、回数はご相談ください）<br />
+                  ※各市町村に助成制度がありますので、各自治体にご確認ください。
+                </p>
+              </div>
+            </div>
+
+            {/* アクセス情報を施設概要ブロック内に追加 */}
+            <div className="mt-3 pt-3 border-t border-orange-200">
+              <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
+              <div className="grid lg:grid-cols-2 gap-3">
+                <div className="space-y-2 text-gray-700 text-base">
+                  <p><strong>バス：</strong>静岡駅前より静鉄バス11番のりば『県立病院高松線』<br />　　　　　登呂コープタウン行き乗車『登呂コープタウン』バス停下車、徒歩約1分</p>
+                  <p><strong>駐車場：</strong>あり（3台分）</p>
+                  <p><strong>近隣施設：</strong>セブンイレブン　徒歩1分<br />　　　　　ウエルシア静岡高松店　徒歩2分</p>
+                  <p><strong>住所：</strong>静岡市駿河区敷地2-26-2 左京ビル201</p>
+                </div>
+                <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
+                  <iframe
+                    src="https://maps.google.com/maps?q=34.9495,138.4145&output=embed"
+                    width="80%"
+                    height="200"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="敷地施設の地図"
                   ></iframe>
                 </div>
               </div>
