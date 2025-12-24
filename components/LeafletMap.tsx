@@ -63,6 +63,6 @@ export default function LeafletMap() {
                     <strong>やすらぎの家 中田</strong>
                 </Tooltip>
             </Marker>
-        </MapContainer>
+        </MapContainer >
     );
 }

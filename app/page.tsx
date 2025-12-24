@@ -184,7 +184,7 @@ export default function Home() {
               >
                 <div className="space-y-2 flex-1 w-full">
                   <p className="text-xl font-bold text-green-800">やすらぎの家 小鹿</p>
-                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区小鹿2-39-1 プチ小鹿</p>
+                  <p className="text-sm font-medium text-gray-600 mb-2">静岡県静岡市駿河区小鹿2丁目39-1<br />プチメリル小鹿</p>
 
                   <div className="bg-orange-500 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
                     <p className="text-white text-2xl font-bold">残り2室</p>
@@ -351,13 +351,18 @@ export default function Home() {
               <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
               <div className="grid lg:grid-cols-2 gap-3">
                 <div className="space-y-2 text-gray-700 text-base">
-                  <p><strong>バス：</strong>「中田三丁目」バス停より徒歩3分</p>
-                  <p><strong>近隣施設：</strong>住宅街、公園近く</p>
-                  <p><strong>住所：</strong>静岡市駿河区中田1-9-21</p>
+                  <p><strong>バス：</strong>静岡駅南口より静鉄バス22番のりば<br />
+                    石田街道線乗車約2分<br />
+                    『大坪町』バス停下車→徒歩約5分</p>
+                  <p><strong>徒歩：</strong>静岡駅より徒歩１１分</p>
+                  <p><strong>駐車場：</strong>あり（２台分）</p>
+                  <p><strong>近隣施設：</strong>富士屋中田店　徒歩１分<br />
+                    ローソン静岡馬淵三丁目店　徒歩５分</p>
+                  <p><strong>住所：</strong>静岡市駿河区中田１－９ー２１</p>
                 </div>
                 <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
                   <iframe
-                    src="https://maps.google.com/maps?q=34.965484,138.391963&output=embed"
+                    src="https://maps.google.com/maps?q=静岡市駿河区中田1-9-21&output=embed"
                     width="80%"
                     height="200"
                     style={{ border: 0 }}
@@ -381,6 +386,9 @@ export default function Home() {
             <div className="bg-orange-500 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
               <p className="text-white text-2xl font-bold">残り2室</p>
             </div>
+          </div>
+          <div className="text-center mb-6">
+            <p className="text-lg font-bold text-orange-600">【一人暮らしに近い完全個室型】</p>
           </div>
 
           <div className="bg-white p-4 md:p-6 rounded-2xl border border-orange-100 shadow-sm mb-6">
@@ -407,7 +415,7 @@ export default function Home() {
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold">居室数</td>
-                        <td className="py-1">6畳＋ロフト（３畳）、6室</td>
+                        <td className="py-1">6畳＋3畳ロフト<br />6室</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold">建物構造</td>
@@ -425,12 +433,10 @@ export default function Home() {
                 <div className="bg-stone-50 rounded-xl p-4 h-full">
                   <h4 className="text-sm font-bold text-green-800 mb-2 text-center">主な設備</h4>
                   <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
-                    <li>全室個室（各個室）</li>
-                    <li>各居室にエアコン、ベッド</li>
-                    <li>布団一式、カーテン、照明完備</li>
-                    <li>トイレ、浴室、洗面、洗濯機</li>
-                    <li>冷蔵庫、WiFi完備（共有）</li>
-                    <li>二重窓、防音壁で防音効果を強化</li>
+                    <li>全室完全個室<br />【集合住宅の1部屋をお借り頂けます】</li>
+                    <li>トイレ・浴室・キッチン<br />各居室に専用設備として完備</li>
+                    <li>エアコン・ベッド・布団一式・Wi-Fi完備</li>
+                    <li>冷蔵庫・洗濯機・レンジ（共有）</li>
                   </ul>
                 </div>
               </div>
@@ -452,11 +458,11 @@ export default function Home() {
                     <tbody>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold">月額利用料</td>
-                        <td className="py-1 text-right font-bold">68,000円</td>
+                        <td className="py-1 text-right font-bold">64,000円</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold pl-4 text-sm">家賃</td>
-                        <td className="py-1 text-right text-sm">28,000円</td>
+                        <td className="py-1 text-right text-sm">39,000円</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold pl-4 text-sm">食費</td>
@@ -464,11 +470,11 @@ export default function Home() {
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold pl-4 text-sm">水道光熱費</td>
-                        <td className="py-1 text-right text-sm">12,000円</td>
+                        <td className="py-1 text-right text-sm">実費</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold pl-4 text-sm">日用品費</td>
-                        <td className="py-1 text-right text-sm">3,000円</td>
+                        <td className="py-1 text-right text-sm">実費</td>
                       </tr>
                     </tbody>
                   </table>
@@ -486,14 +492,16 @@ export default function Home() {
               <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
               <div className="grid lg:grid-cols-2 gap-3">
                 <div className="space-y-2 text-gray-700 text-base">
-                  <p><strong>バス：</strong>静岡駅南口より静鉄バス２１番のりばみなみ線乗車約16分<br />　　　　　『小鹿営業所』バス停下車、徒歩約４分</p>
+                  <p><strong>バス：</strong>静岡駅南口より静鉄バス21番のりば<br />
+                    みなみ線乗車約16分<br />
+                    『小鹿営業所』バス停下車→徒歩約4分</p>
                   <p><strong>駐車場：</strong>あり（２台分）</p>
                   <p><strong>近隣施設：</strong>セブンイレブン　徒歩７分<br />　　　　　杏林堂静岡小鹿店　徒歩４分</p>
-                  <p><strong>住所：</strong>静岡市駿河区小鹿886　プチ小鹿</p>
+                  <p><strong>住所：</strong>静岡県静岡市駿河区小鹿2丁目39-1 プチメリル小鹿</p>
                 </div>
                 <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
                   <iframe
-                    src="https://maps.google.com/maps?q=34.9731,138.4221&output=embed"
+                    src="https://maps.google.com/maps?q=静岡市駿河区小鹿2-39-1&output=embed"
                     width="80%"
                     height="200"
                     style={{ border: 0 }}
@@ -561,12 +569,11 @@ export default function Home() {
                 <div className="bg-stone-50 rounded-xl p-4 h-full">
                   <h4 className="text-sm font-bold text-green-800 mb-2 text-center">主な設備</h4>
                   <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
-                    <li>全室個室（各個室）</li>
-                    <li>各居室にエアコン、ベッド</li>
-                    <li>布団一式、カーテン、照明完備</li>
-                    <li>トイレ、浴室、洗面、洗濯機</li>
-                    <li>冷蔵庫、WiFi完備（共有）</li>
-                    <li>二重窓、防音壁で防音効果を強化</li>
+                    <li>全室鍵付き個室</li>
+                    <li>エアコン・ベッド・布団一式完備</li>
+                    <li>トイレ・浴室：2ヶ所</li>
+                    <li>冷蔵庫・洗濯機・レンジ：各2台</li>
+                    <li>Wi-Fi完備</li>
                   </ul>
                 </div>
               </div>
@@ -588,11 +595,11 @@ export default function Home() {
                     <tbody>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold">月額利用料</td>
-                        <td className="py-1 text-right font-bold">68,000円</td>
+                        <td className="py-1 text-right font-bold">79,000円</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold pl-4 text-sm">家賃</td>
-                        <td className="py-1 text-right text-sm">28,000円</td>
+                        <td className="py-1 text-right text-sm">39,000円</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold pl-4 text-sm">食費</td>
@@ -622,14 +629,16 @@ export default function Home() {
               <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
               <div className="grid lg:grid-cols-2 gap-3">
                 <div className="space-y-2 text-gray-700 text-base">
-                  <p><strong>バス：</strong>静岡駅前より静鉄バス３番のりば藁科線乗車約10分<br />　　　　　『安西四丁目』バス停下車、徒歩約３分</p>
+                  <p><strong>バス：</strong>静岡駅北口より静鉄バス3番のりば<br />
+                    藁科線乗車約10分<br />
+                    『安西四丁目』バス停下車→徒歩約3分</p>
                   <p><strong>駐車場：</strong>あり（２台分）</p>
                   <p><strong>近隣施設：</strong>セブンイレブン　徒歩４分<br />　　　　　ウエルシア静岡柳町店　徒歩８分</p>
                   <p><strong>住所：</strong>静岡市葵区三番町23-6</p>
                 </div>
                 <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
                   <iframe
-                    src="https://maps.google.com/maps?q=34.9761,138.3683&output=embed"
+                    src="https://maps.google.com/maps?q=静岡市葵区三番町23-6&output=embed"
                     width="80%"
                     height="200"
                     style={{ border: 0 }}
@@ -698,12 +707,11 @@ export default function Home() {
                 <div className="bg-stone-50 rounded-xl p-4 h-full">
                   <h4 className="text-sm font-bold text-green-800 mb-2 text-center">主な設備</h4>
                   <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
-                    <li>全室【鍵付き】個室</li>
-                    <li>各居室にエアコン、ベッド</li>
-                    <li>布団一式、カーテン、照明完備</li>
-                    <li>トイレ、浴室、洗面、洗濯機</li>
-                    <li>冷蔵庫、WiFi完備（共有）</li>
-                    <li>二重窓、防音壁で防音効果を強化</li>
+                    <li>全室鍵付き個室</li>
+                    <li>エアコン・ベッド・布団一式完備</li>
+                    <li>トイレ・浴室：2ヶ所</li>
+                    <li>冷蔵庫・洗濯機・レンジ：各2台</li>
+                    <li>Wi-Fi完備</li>
                   </ul>
                 </div>
               </div>
@@ -725,11 +733,11 @@ export default function Home() {
                     <tbody>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold">月額利用料</td>
-                        <td className="py-1 text-right font-bold">68,000円</td>
+                        <td className="py-1 text-right font-bold">72,000円</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold pl-4 text-sm">家賃</td>
-                        <td className="py-1 text-right text-sm">28,000円</td>
+                        <td className="py-1 text-right text-sm">32,000円</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold pl-4 text-sm">食費</td>
@@ -759,14 +767,16 @@ export default function Home() {
               <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
               <div className="grid lg:grid-cols-2 gap-3">
                 <div className="space-y-2 text-gray-700 text-base">
-                  <p><strong>バス：</strong>静岡駅前より静鉄バス11番のりば『県立病院高松線』<br />　　　　　登呂コープタウン行き乗車『登呂コープタウン』バス停下車、徒歩約1分</p>
+                  <p><strong>バス：</strong>静岡駅北口より静鉄バス11番のりば<br />
+                    県立病院高松線乗車約20分<br />
+                    『登呂コープタウン』バス停下車→徒歩約1分</p>
                   <p><strong>駐車場：</strong>あり（3台分）</p>
                   <p><strong>近隣施設：</strong>セブンイレブン　徒歩1分<br />　　　　　ウエルシア静岡高松店　徒歩2分</p>
                   <p><strong>住所：</strong>静岡市駿河区敷地2-26-2 左京ビル201</p>
                 </div>
                 <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
                   <iframe
-                    src="https://maps.google.com/maps?q=34.9495,138.4145&output=embed"
+                    src="https://maps.google.com/maps?q=やすらぎの家+敷地+静岡市駿河区敷地2-26-2&output=embed"
                     width="80%"
                     height="200"
                     style={{ border: 0 }}
