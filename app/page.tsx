@@ -102,15 +102,15 @@ export default function Home() {
       {/* ヒーローセクション */}
       <section className="relative bg-gradient-to-br from-orange-100 via-orange-50 to-yellow-50 py-16 px-6 md:py-24 mt-16 overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url("/ヒーロー画像③.png")', backgroundPosition: 'calc(50% - 120px) center' }}
+          className="absolute inset-0 bg-cover bg-no-repeat scale-110"
+          style={{ backgroundImage: 'url("/ヒーロー画像⑤.png")', backgroundPosition: 'calc(50% + 100px) center' }}
         ></div>
-        <div className="absolute inset-0 bg-white/60"></div>
+        <div className="absolute inset-0 bg-white/85"></div>
         <div className="relative max-w-7xl mx-auto z-10">
           <div className="text-center max-w-4xl mx-auto">
             <img
               alt="やすらぎの家 ロゴ"
-              className="mx-auto mb-6 max-w-xl w-full h-auto drop-shadow-lg"
+              className="mx-auto mb-6 max-w-xl w-full h-auto mix-blend-multiply"
               src="/やすらぎの家ロゴ背景透明.png"
             />
 
@@ -118,9 +118,7 @@ export default function Home() {
               {/* Text removed as per request */}
             </div>
 
-            <p className="text-2xl md:text-3xl text-gray-700 mb-8 font-light leading-relaxed drop-shadow-sm">
-              穏やかに、自分らしく暮らせる居場所
-            </p>
+
             <button
               onClick={() => scrollToSection('contact')}
               className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all duration-300 whitespace-nowrap cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
@@ -286,7 +284,15 @@ export default function Home() {
       </section>
 
       {/* 中田施設詳細 */}
-      <section id="nakada-detail" className="py-12 px-6 relative overflow-hidden">
+      <section
+        id="nakada-detail"
+        className="py-12 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("/葉っぱ画像①.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 中田</h2>
@@ -351,14 +357,26 @@ export default function Home() {
               <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
               <div className="grid lg:grid-cols-2 gap-3">
                 <div className="space-y-2 text-gray-700 text-base">
-                  <p><strong>バス：</strong>静岡駅南口より静鉄バス22番のりば<br />
-                    石田街道線乗車約2分<br />
-                    『大坪町』バス停下車→徒歩約5分</p>
-                  <p><strong>徒歩：</strong>静岡駅より徒歩１１分</p>
-                  <p><strong>駐車場：</strong>あり（２台分）</p>
-                  <p><strong>近隣施設：</strong>富士屋中田店　徒歩１分<br />
-                    ローソン静岡馬淵三丁目店　徒歩５分</p>
-                  <p><strong>住所：</strong>静岡市駿河区中田１－９ー２１</p>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">バス：</span>
+                    <span>静岡駅南口より静鉄バス22番のりば<br />石田街道線乗車約2分<br />『大坪町』バス停下車→徒歩約5分</span>
+                  </div>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">徒歩：</span>
+                    <span>静岡駅より徒歩１１分</span>
+                  </div>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">駐車場：</span>
+                    <span>あり（２台分）</span>
+                  </div>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">近隣施設：</span>
+                    <span>富士屋中田店　徒歩１分<br />ローソン静岡馬淵三丁目店　徒歩５分</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="font-bold shrink-0 w-[5.5em]">住所：</span>
+                    <span>静岡市駿河区中田１－９ー２１</span>
+                  </div>
                 </div>
                 <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
                   <iframe
@@ -379,7 +397,16 @@ export default function Home() {
       </section>
 
       {/* プチ小鹿施設詳細 */}
-      <section id="petit-oga-detail" className="py-12 px-6 relative overflow-hidden">
+      {/* プチ小鹿施設詳細 */}
+      <section
+        id="petit-oga-detail"
+        className="py-12 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("/葉っぱ画像②.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 小鹿</h2>
@@ -435,7 +462,7 @@ export default function Home() {
                   <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
                     <li>全室完全個室<br />【集合住宅の1部屋をお借り頂けます】</li>
                     <li>トイレ・浴室・キッチン<br />各居室に専用設備として完備</li>
-                    <li>エアコン・ベッド・布団一式・Wi-Fi完備</li>
+                    <li>エアコン・ベッド・布団一式<br />Wi-Fi完備</li>
                     <li>冷蔵庫・洗濯機・レンジ（共有）</li>
                   </ul>
                 </div>
@@ -492,12 +519,22 @@ export default function Home() {
               <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
               <div className="grid lg:grid-cols-2 gap-3">
                 <div className="space-y-2 text-gray-700 text-base">
-                  <p><strong>バス：</strong>静岡駅南口より静鉄バス21番のりば<br />
-                    みなみ線乗車約16分<br />
-                    『小鹿営業所』バス停下車→徒歩約4分</p>
-                  <p><strong>駐車場：</strong>あり（２台分）</p>
-                  <p><strong>近隣施設：</strong>セブンイレブン　徒歩７分<br />　　　　　杏林堂静岡小鹿店　徒歩４分</p>
-                  <p><strong>住所：</strong>静岡県静岡市駿河区小鹿2丁目39-1 プチメリル小鹿</p>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">バス：</span>
+                    <span>静岡駅南口より静鉄バス21番のりば<br />みなみ線乗車約16分<br />『小鹿営業所』バス停下車→徒歩約4分</span>
+                  </div>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">駐車場：</span>
+                    <span>あり（２台分）</span>
+                  </div>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">近隣施設：</span>
+                    <span>セブンイレブン　徒歩７分<br />杏林堂静岡小鹿店　徒歩４分</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="font-bold shrink-0 w-[5.5em]">住所：</span>
+                    <span>静岡県静岡市駿河区小鹿2丁目39-1 プチメリル小鹿</span>
+                  </div>
                 </div>
                 <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
                   <iframe
@@ -518,7 +555,16 @@ export default function Home() {
       </section>
 
       {/* 三番町施設詳細 */}
-      <section id="sanbancho-detail" className="py-12 px-6 relative overflow-hidden">
+      {/* 三番町施設詳細 */}
+      <section
+        id="sanbancho-detail"
+        className="py-12 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("/葉っぱ画像③.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 三番町</h2>
@@ -629,12 +675,22 @@ export default function Home() {
               <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
               <div className="grid lg:grid-cols-2 gap-3">
                 <div className="space-y-2 text-gray-700 text-base">
-                  <p><strong>バス：</strong>静岡駅北口より静鉄バス3番のりば<br />
-                    藁科線乗車約10分<br />
-                    『安西四丁目』バス停下車→徒歩約3分</p>
-                  <p><strong>駐車場：</strong>あり（２台分）</p>
-                  <p><strong>近隣施設：</strong>セブンイレブン　徒歩４分<br />　　　　　ウエルシア静岡柳町店　徒歩８分</p>
-                  <p><strong>住所：</strong>静岡市葵区三番町23-6</p>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">バス：</span>
+                    <span>静岡駅北口より静鉄バス3番のりば<br />藁科線乗車約10分<br />『安西四丁目』バス停下車→徒歩約3分</span>
+                  </div>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">駐車場：</span>
+                    <span>あり（２台分）</span>
+                  </div>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">近隣施設：</span>
+                    <span>セブンイレブン　徒歩４分<br />ウエルシア静岡柳町店　徒歩８分</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="font-bold shrink-0 w-[5.5em]">住所：</span>
+                    <span>静岡市葵区三番町23-6</span>
+                  </div>
                 </div>
                 <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
                   <iframe
@@ -655,7 +711,16 @@ export default function Home() {
       </section>
 
       {/* 左京ビル施設詳細 */}
-      <section id="shikiji-detail" className="py-12 px-6 relative overflow-hidden">
+      {/* 左京ビル施設詳細 */}
+      <section
+        id="shikiji-detail"
+        className="py-12 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("/葉っぱ画像④.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 敷地</h2>
@@ -767,12 +832,22 @@ export default function Home() {
               <h3 className="text-sm md:text-base font-bold text-green-800 mb-2 text-center">アクセス</h3>
               <div className="grid lg:grid-cols-2 gap-3">
                 <div className="space-y-2 text-gray-700 text-base">
-                  <p><strong>バス：</strong>静岡駅北口より静鉄バス11番のりば<br />
-                    県立病院高松線乗車約20分<br />
-                    『登呂コープタウン』バス停下車→徒歩約1分</p>
-                  <p><strong>駐車場：</strong>あり（3台分）</p>
-                  <p><strong>近隣施設：</strong>セブンイレブン　徒歩1分<br />　　　　　ウエルシア静岡高松店　徒歩2分</p>
-                  <p><strong>住所：</strong>静岡市駿河区敷地2-26-2 左京ビル201</p>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">バス：</span>
+                    <span>静岡駅北口より静鉄バス11番のりば<br />県立病院高松線乗車約20分<br />『登呂コープタウン』バス停下車→徒歩約1分</span>
+                  </div>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">駐車場：</span>
+                    <span>あり（3台分）</span>
+                  </div>
+                  <div className="flex items-start border-b border-gray-200 pb-3 mb-3">
+                    <span className="font-bold shrink-0 w-[5.5em]">近隣施設：</span>
+                    <span>セブンイレブン　徒歩1分<br />ウエルシア静岡高松店　徒歩2分</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="font-bold shrink-0 w-[5.5em]">住所：</span>
+                    <span>静岡市駿河区敷地2-26-2 左京ビル201</span>
+                  </div>
                 </div>
                 <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
                   <iframe
@@ -812,18 +887,24 @@ export default function Home() {
           <div className="grid lg:grid-cols-3 gap-8 items-stretch">
             <div className="order-2 lg:order-1 lg:col-span-1 h-full">
               {/* 画像を配置するスペース（1/3） */}
-              <div className="w-full h-full bg-transparent rounded-3xl border-2 border-dashed border-gray-300 flex items-center justify-center min-h-[300px]">
-                <p className="text-gray-400 text-sm">画像を配置</p>
+              <div className="w-full h-full rounded-3xl overflow-hidden shadow-md min-h-[300px]">
+                <img
+                  src="/ごあいさつ会話.png"
+                  alt="スタッフと利用者様の会話の様子"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="order-1 lg:order-2 lg:col-span-2">
               <div className="bg-gradient-to-br from-orange-50 to-white p-8 md:p-10 rounded-3xl shadow-sm border border-orange-100 relative overflow-hidden">
-                <div className="space-y-4 text-xl md:text-2xl leading-relaxed text-gray-700">
+                <div className="space-y-4 text-lg md:text-xl leading-relaxed text-gray-700">
                   <p>
-                    私たちライフリスト株式会社は、静岡市を中心に地域密着型不動産賃貸業を運営しております。
+                    私たちライフリスト株式会社は、<br />静岡市を中心に地域密着型不動産賃貸業を運営しております。
                   </p>
                   <p>
-                    この度、静岡市駿河区敷地に障がいのある方のグループホーム「やすらぎの家」を開設する運びとなりました。「やすらぎの家」は障がいをお持ちで、将来は自立した生活を営みたいと希望される方が少人数での共同生活や地域社会との交流を通し、ここから新しいスタートを切るための障がい者支援施設として設立されたグループホーム（共同生活援助）です。利用者様はここで、当法人のスタッフと共同生活を営みながら、それぞれの個性を活かし安全・快適に暮らしていただく事ができます。
+                    この度、静岡市駿河区敷地に障がいのある方のグループホーム「やすらぎの家」を開設する運びとなりました。<br /><br />
+                    「やすらぎの家」は障がいをお持ちで、将来は自立した生活を営みたいと希望される方が少人数での共同生活や地域社会との交流を通し、ここから新しいスタートを切るための障がい者支援施設として設立されたグループホーム（共同生活援助）です。<br />
+                    利用者様はここで、当法人のスタッフと共同生活を営みながら、それぞれの個性を活かし安全・快適に暮らしていただく事ができます。
                   </p>
                   <p>
                     私たちは、「やすらぎの家」で暮らす全ての利用者様、お一人おひとりの生活を尊重し、ここに暮らしながら、それぞれの「自立」の実現に向かう夢を、心を込めて支援させていただきます。
@@ -857,7 +938,7 @@ export default function Home() {
             {/* スケジュール */}
             <div className="w-full">
               <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-6 shadow-lg border border-orange-200 h-full relative">
-                <div className="space-y-2">
+                <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="text-green-800 font-bold text-2xl md:text-3xl flex-shrink-0 w-20">
                       6:30
@@ -951,13 +1032,21 @@ export default function Home() {
             {/* 画像エリア - 2つの画像を配置（ジグザグ・高さ合わせ） */}
             <div className="w-full flex flex-col justify-between h-full py-2">
               {/* 1 (Left) */}
-              <div className="w-3/4 self-start aspect-video bg-transparent rounded-3xl border-2 border-dashed border-gray-300 flex items-center justify-center">
-                <p className="text-gray-400 text-sm px-4 text-center">世話人と利用者の会話の様子1</p>
+              <div className="w-3/4 self-start bg-transparent rounded-3xl overflow-hidden border-2 border-white/50 shadow-md">
+                <img
+                  src="/お部屋の会話.png"
+                  alt="お部屋の会話"
+                  className="w-full h-auto scale-125"
+                />
               </div>
 
               {/* 2 (Right) */}
-              <div className="w-3/4 self-end aspect-video bg-transparent rounded-3xl border-2 border-dashed border-gray-300 flex items-center justify-center">
-                <p className="text-gray-400 text-sm px-4 text-center">食事の様子</p>
+              <div className="w-3/4 self-end bg-transparent rounded-3xl overflow-hidden border-2 border-white/50 shadow-md">
+                <img
+                  src="/食事②.png"
+                  alt="食事の様子"
+                  className="w-full h-auto scale-110"
+                />
               </div>
             </div>
           </div>
@@ -1097,9 +1186,9 @@ export default function Home() {
               {/* 1行目：1〜5（左から右） */}
               <div className="flex flex-col md:flex-row items-center justify-center gap-2">
                 {/* 1 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
                   <div className="text-center w-full">
-                    <div className="text-base font-bold text-green-800">ご見学</div>
+                    <div className="text-xl font-bold text-green-800">ご見学</div>
                   </div>
                 </div>
 
@@ -1107,9 +1196,9 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
 
                 {/* 2 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
                   <div className="text-center w-full">
-                    <div className="text-base font-bold text-green-800">利用申し込み</div>
+                    <div className="text-xl font-bold text-green-800">利用申し込み</div>
                   </div>
                 </div>
 
@@ -1117,9 +1206,9 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
 
                 {/* 3 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
                   <div className="text-center w-full">
-                    <div className="text-base font-bold text-green-800">面談</div>
+                    <div className="text-xl font-bold text-green-800">面談</div>
                   </div>
                 </div>
 
@@ -1127,9 +1216,9 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
 
                 {/* 4 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
                   <div className="text-center w-full">
-                    <div className="text-base font-bold text-green-800">体験入居</div>
+                    <div className="text-xl font-bold text-green-800">体験入居</div>
                   </div>
                 </div>
 
@@ -1137,9 +1226,9 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
 
                 {/* 5 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
                   <div className="text-center w-full">
-                    <div className="text-base font-bold text-green-800">ご入居審査</div>
+                    <div className="text-xl font-bold text-green-800">ご入居審査</div>
                   </div>
                 </div>
               </div>
@@ -1152,9 +1241,9 @@ export default function Home() {
               {/* 2行目：6〜10（右から左） */}
               <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-2">
                 {/* 6 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
                   <div className="text-center w-full">
-                    <div className="text-base font-bold text-green-800">受給者証の申請</div>
+                    <div className="text-xl font-bold text-green-800">受給者証の申請</div>
                   </div>
                 </div>
 
@@ -1162,9 +1251,9 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
 
                 {/* 7 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
                   <div className="text-center w-full">
-                    <div className="text-base font-bold text-green-800">支給決定</div>
+                    <div className="text-xl font-bold text-green-800">支給決定</div>
                   </div>
                 </div>
 
@@ -1172,9 +1261,9 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
 
                 {/* 8 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
                   <div className="text-center w-full">
-                    <div className="text-base font-bold text-green-800">利用契約</div>
+                    <div className="text-xl font-bold text-green-800">利用契約</div>
                   </div>
                 </div>
 
@@ -1182,9 +1271,9 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
 
                 {/* 9 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-3 py-3 rounded-xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
                   <div className="text-center w-full">
-                    <div className="text-base font-bold text-green-800">入居準備</div>
+                    <div className="text-xl font-bold text-green-800">入居準備</div>
                   </div>
                 </div>
 
@@ -1192,9 +1281,9 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
 
                 {/* 10 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-500 to-orange-600 px-3 py-3 rounded-xl shadow-sm border border-orange-600 hover:shadow-md transition-shadow min-h-[80px] flex items-center justify-center">
+                <div className="w-full md:w-auto bg-gradient-to-br from-orange-500 to-orange-600 px-6 py-5 rounded-2xl shadow-sm border border-orange-600 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
                   <div className="text-center w-full">
-                    <div className="text-base font-bold text-white">ご入居</div>
+                    <div className="text-xl font-bold text-white">ご入居</div>
                   </div>
                 </div>
               </div>
