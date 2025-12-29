@@ -100,17 +100,17 @@ export default function Home() {
       </nav>
 
       {/* ヒーローセクション */}
-      <section className="relative bg-gradient-to-br from-orange-100 via-orange-50 to-yellow-50 py-16 px-6 md:py-24 mt-16 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-orange-100 via-orange-50 to-yellow-50 pt-0 pb-16 px-6 md:pt-6 md:pb-24 mt-16 overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-no-repeat scale-110"
+          className="absolute inset-0 bg-cover bg-no-repeat scale-[1.2]"
           style={{ backgroundImage: 'url("/ヒーロー画像⑤.png")', backgroundPosition: 'calc(50% + 100px) center' }}
         ></div>
-        <div className="absolute inset-0 bg-white/85"></div>
+        <div className="absolute inset-0 bg-white/80"></div>
         <div className="relative max-w-7xl mx-auto z-10">
           <div className="text-center max-w-4xl mx-auto">
             <img
               alt="やすらぎの家 ロゴ"
-              className="mx-auto mb-6 max-w-xl w-full h-auto mix-blend-multiply"
+              className="mx-auto mb-6 max-w-xl w-full h-auto mix-blend-multiply animate-fade-in-up -mt-9"
               src="/やすらぎの家ロゴ背景透明.png"
             />
 
@@ -169,10 +169,9 @@ export default function Home() {
                       <span className="font-medium text-gray-600">定員5名</span>
                     </div>
                   </div>
-
-                  <div className="mt-4 text-green-600 font-medium">
-                    <i className="ri-arrow-down-line text-lg"></i>
-                  </div>
+                </div>
+                <div className="mt-4 text-green-600 font-medium">
+                  <i className="ri-arrow-down-line text-lg"></i>
                 </div>
               </button>
 
@@ -199,10 +198,9 @@ export default function Home() {
                       <span className="font-medium text-gray-600">定員2名 (入居0名)</span>
                     </div>
                   </div>
-
-                  <div className="mt-4 text-green-600 font-medium">
-                    <i className="ri-arrow-down-line text-lg"></i>
-                  </div>
+                </div>
+                <div className="mt-4 text-green-600 font-medium">
+                  <i className="ri-arrow-down-line text-lg"></i>
                 </div>
               </button>
 
@@ -229,10 +227,9 @@ export default function Home() {
                       <span className="font-medium text-gray-600">定員2名 (入居2名)</span>
                     </div>
                   </div>
-
-                  <div className="mt-4 text-green-600 font-medium">
-                    <i className="ri-arrow-down-line text-lg"></i>
-                  </div>
+                </div>
+                <div className="mt-4 text-green-600 font-medium">
+                  <i className="ri-arrow-down-line text-lg"></i>
                 </div>
               </button>
 
@@ -259,10 +256,9 @@ export default function Home() {
                       <span className="font-medium text-gray-600">定員2名 (入居2名)</span>
                     </div>
                   </div>
-
-                  <div className="mt-4 text-green-600 font-medium">
-                    <i className="ri-arrow-down-line text-lg"></i>
-                  </div>
+                </div>
+                <div className="mt-4 text-green-600 font-medium">
+                  <i className="ri-arrow-down-line text-lg"></i>
                 </div>
               </button>
             </div>
@@ -319,8 +315,8 @@ export default function Home() {
                   <table className="w-full text-gray-700 text-base mb-4">
                     <tbody>
                       <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold w-1/3">定員</td>
-                        <td className="py-1">5名</td>
+                        <td className="py-1 font-semibold w-1/3">居室数</td>
+                        <td className="py-1">5室</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold">開設年月</td>
@@ -437,13 +433,14 @@ export default function Home() {
                   <table className="w-full text-gray-700 text-base mb-4">
                     <tbody>
                       <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold w-1/3">定員</td>
-                        <td className="py-1">6名</td>
+                        <td className="py-1 font-semibold w-1/3">居室数</td>
+                        <td className="py-1">6室</td>
                       </tr>
                       <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold">居室数</td>
-                        <td className="py-1">6畳＋3畳ロフト<br />6室</td>
+                        <td className="py-1 font-semibold">居室の広さ</td>
+                        <td className="py-1">6畳＋3畳ロフト</td>
                       </tr>
+
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold">建物構造</td>
                         <td className="py-1">木造2階建て</td>
@@ -592,13 +589,14 @@ export default function Home() {
                   <table className="w-full text-gray-700 text-base mb-4">
                     <tbody>
                       <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold w-1/3">定員</td>
-                        <td className="py-1">6名</td>
+                        <td className="py-1 font-semibold w-1/3">居室数</td>
+                        <td className="py-1">6室</td>
                       </tr>
                       <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold">居室数</td>
-                        <td className="py-1">6畳～10畳、6室</td>
+                        <td className="py-1 font-semibold">居室の広さ</td>
+                        <td className="py-1">6畳～10畳</td>
                       </tr>
+
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold">建物構造</td>
                         <td className="py-1">鉄骨造３階建て</td>
@@ -749,13 +747,14 @@ export default function Home() {
                   <table className="w-full text-gray-700 text-base mb-4">
                     <tbody>
                       <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold w-1/3">定員</td>
-                        <td className="py-1">5名</td>
+                        <td className="py-1 font-semibold w-1/3">居室数</td>
+                        <td className="py-1">5室</td>
                       </tr>
                       <tr className="border-b border-gray-200">
-                        <td className="py-1 font-semibold">居室数</td>
-                        <td className="py-1">6畳5室</td>
+                        <td className="py-1 font-semibold">居室の広さ</td>
+                        <td className="py-1">6畳</td>
                       </tr>
+
                       <tr className="border-b border-gray-200">
                         <td className="py-1 font-semibold">建物構造</td>
                         <td className="py-1">木造2階建 2階</td>
