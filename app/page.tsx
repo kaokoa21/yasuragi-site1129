@@ -158,15 +158,15 @@ export default function Home() {
                   <p className="text-xl font-bold text-green-800">やすらぎの家 中田</p>
                   <p className="text-sm font-medium text-gray-600 mb-2">駿河区中田1-9-21</p>
 
-                  <div className="bg-blue-600 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
-                    <p className="text-white text-lg font-bold">2026年4月OPEN予定！</p>
+                  <div className="bg-orange-500 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
+                    <p className="text-white text-2xl font-bold">残り3室</p>
                   </div>
 
                   {/* Capacity Breakdown */}
                   <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
                     <div className="flex justify-between items-center border-b border-gray-200 pb-2">
                       <span className="font-bold text-gray-700">本体</span>
-                      <span className="font-medium text-gray-600">定員5名</span>
+                      <span className="font-medium text-gray-600">定員5名 (<span className="text-red-600 font-bold">入居2名</span>)</span>
                     </div>
                   </div>
                 </div>
@@ -183,15 +183,15 @@ export default function Home() {
                   <p className="text-xl font-bold text-green-800">やすらぎの家 小鹿</p>
                   <p className="text-sm font-medium text-gray-600 mb-2">静岡県静岡市駿河区小鹿2丁目39-1<br />プチメリル小鹿</p>
 
-                  <div className="bg-orange-500 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
-                    <p className="text-white text-2xl font-bold">残り2室</p>
+                  <div className="bg-gray-400 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
+                    <p className="text-white text-2xl font-bold">満室</p>
                   </div>
 
                   {/* Capacity Breakdown */}
                   <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
                     <div className="flex justify-between items-center border-b border-gray-200 pb-2">
                       <span className="font-bold text-gray-700">本体</span>
-                      <span className="font-medium text-gray-600">定員6名 (<span className="text-red-600 font-bold">入居4名</span>)</span>
+                      <span className="font-medium text-gray-600">定員6名 (入居6名)</span>
                     </div>
                     <div className="flex justify-between items-center pt-1">
                       <span className="font-bold text-gray-700">サテライト</span>
@@ -212,19 +212,19 @@ export default function Home() {
                   <p className="text-xl font-bold text-green-800">やすらぎの家 三番町</p>
                   <p className="text-sm font-medium text-gray-600 mb-2">葵区三番町23-6</p>
 
-                  <div className="bg-gray-400 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
-                    <p className="text-white text-2xl font-bold">満室</p>
+                  <div className="bg-orange-500 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
+                    <p className="text-white text-2xl font-bold">残り1室</p>
                   </div>
 
                   {/* Capacity Breakdown */}
                   <div className="mt-4 bg-gray-50 p-3 rounded-xl text-left text-sm space-y-2">
                     <div className="flex justify-between items-center border-b border-gray-200 pb-2">
                       <span className="font-bold text-gray-700">本体</span>
-                      <span className="font-medium text-gray-600">定員6名 (入居6名)</span>
+                      <span className="font-medium text-gray-600">定員6名 (<span className="text-red-600 font-bold">入居5名</span>)</span>
                     </div>
                     <div className="flex justify-between items-center pt-1">
                       <span className="font-bold text-gray-700">サテライト</span>
-                      <span className="font-medium text-gray-600">定員2名 (入居2名)</span>
+                      <span className="font-medium text-gray-600">定員2名 (入居0名)</span>
                     </div>
                   </div>
                 </div>
@@ -292,8 +292,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 中田</h2>
-            <div className="bg-blue-600 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
-              <p className="text-white text-xl font-bold">2026年4月OPEN予定！</p>
+            <div className="bg-orange-500 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
+              <p className="text-white text-xl font-bold">残り3室</p>
             </div>
           </div>
 
@@ -406,8 +406,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 小鹿</h2>
-            <div className="bg-orange-500 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
-              <p className="text-white text-2xl font-bold">残り2室</p>
+            <div className="bg-gray-400 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
+              <p className="text-white text-2xl font-bold">満室</p>
             </div>
           </div>
           <div className="text-center mb-6">
@@ -535,7 +535,7 @@ export default function Home() {
                 </div>
                 <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
                   <iframe
-                    src="https://maps.google.com/maps?q=静岡市駿河区小鹿2-39-1&output=embed"
+                    src="https://maps.google.com/maps?q=34.9731039,138.4221109&z=17&output=embed"
                     width="80%"
                     height="200"
                     style={{ border: 0 }}
@@ -565,8 +565,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">やすらぎの家 三番町</h2>
-            <div className="bg-gray-400 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
-              <p className="text-white text-2xl font-bold">満室</p>
+            <div className="bg-orange-500 flex items-center justify-center px-6 py-3 rounded-full shadow-md">
+              <p className="text-white text-2xl font-bold">残り1室</p>
             </div>
           </div>
 
@@ -850,7 +850,7 @@ export default function Home() {
                 </div>
                 <div className="bg-gray-100 rounded-xl overflow-hidden flex justify-center items-center py-2">
                   <iframe
-                    src="https://maps.google.com/maps?q=やすらぎの家+敷地+静岡市駿河区敷地2-26-2&output=embed"
+                    src="https://maps.google.com/maps?q=34.95147,138.414917&z=17&output=embed"
                     width="80%"
                     height="200"
                     style={{ border: 0 }}
@@ -1344,8 +1344,8 @@ export default function Home() {
             <div className="mb-12">
               <h3 className="text-4xl font-semibold text-green-800 mb-8">障がい者グループホーム やすらぎの家</h3>
               <div className="space-y-4 text-gray-700 text-xl">
-                <p>〒422-8036</p>
-                <p>静岡県静岡市駿河区敷地2-26-2 左京ビル201</p>
+                <p>〒422-8041</p>
+                <p>静岡県静岡市駿河区中田一丁目9-21</p>
                 <p className="text-3xl font-bold text-green-800">TEL：054-260-4730</p>
               </div>
             </div>

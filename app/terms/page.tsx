@@ -60,8 +60,8 @@ export default function Terms() {
                     <tr className="border-b border-orange-100">
                       <td className="py-4 font-bold align-top text-green-800">所在地</td>
                       <td className="py-4">
-                        〒422-8036<br />
-                        静岡県静岡市駿河区敷地2-26-2 左京ビル201
+                        〒422-8041<br />
+                        静岡県静岡市駿河区中田一丁目9-21
                       </td>
                     </tr>
                     <tr className="border-b border-orange-100">
@@ -102,7 +102,7 @@ export default function Terms() {
                   障がい者グループホーム やすらぎの家
                 </p>
                 <div className="space-y-2 text-gray-700 text-lg">
-                  <p>〒422-8036 静岡県静岡市駿河区敷地2-26-2 左京ビル201</p>
+                  <p>〒422-8041 静岡県静岡市駿河区中田一丁目9-21</p>
                   <p className="text-2xl font-bold text-green-800 my-2">TEL：054-260-4730</p>
                   <p className="text-sm text-gray-500 mt-4">運営：株式会社ライフリスト</p>
                 </div>
