@@ -181,7 +181,7 @@ export default function Home() {
               >
                 <div className="space-y-2 flex-1 w-full">
                   <p className="text-xl font-bold text-green-800">やすらぎの家 小鹿</p>
-                  <p className="text-sm font-medium text-gray-600 mb-2">静岡県静岡市駿河区小鹿2丁目39-1<br />プチメリル小鹿</p>
+                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区小鹿2丁目39-1<br />プチメリル小鹿</p>
 
                   <div className="bg-gray-400 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
                     <p className="text-white text-2xl font-bold">満室</p>
@@ -1182,12 +1182,12 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-4 mb-6 max-w-fit mx-auto">
-              {/* 1行目：1〜5（左から右） */}
+              {/* 1行目：1〜4（左から右） */}
               <div className="flex flex-col md:flex-row items-center justify-center gap-2">
                 {/* 1 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
+                <div className="w-full min-w-[200px] md:min-w-0 md:w-36 lg:w-44 bg-gradient-to-br from-orange-100 to-orange-50 px-3 lg:px-4 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center">
                   <div className="text-center w-full">
-                    <div className="text-xl font-bold text-green-800">ご見学</div>
+                    <div className="text-base sm:text-lg lg:text-xl font-bold text-green-800 whitespace-nowrap">見学</div>
                   </div>
                 </div>
 
@@ -1195,9 +1195,9 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
 
                 {/* 2 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
+                <div className="w-full min-w-[200px] md:min-w-0 md:w-36 lg:w-44 bg-gradient-to-br from-orange-100 to-orange-50 px-3 lg:px-4 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center">
                   <div className="text-center w-full">
-                    <div className="text-xl font-bold text-green-800">利用申し込み</div>
+                    <div className="text-base sm:text-lg lg:text-xl font-bold text-green-800 whitespace-nowrap">体験入居</div>
                   </div>
                 </div>
 
@@ -1205,9 +1205,9 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
 
                 {/* 3 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
+                <div className="w-full min-w-[200px] md:min-w-0 md:w-36 lg:w-44 bg-gradient-to-br from-orange-100 to-orange-50 px-3 lg:px-4 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center">
                   <div className="text-center w-full">
-                    <div className="text-xl font-bold text-green-800">面談</div>
+                    <div className="text-base sm:text-lg lg:text-xl font-bold text-green-800 whitespace-nowrap">ご入居審査</div>
                   </div>
                 </div>
 
@@ -1215,34 +1215,34 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
 
                 {/* 4 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
+                <div className="w-full min-w-[200px] md:min-w-0 md:w-36 lg:w-44 bg-gradient-to-br from-orange-100 to-orange-50 px-3 lg:px-4 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center">
                   <div className="text-center w-full">
-                    <div className="text-xl font-bold text-green-800">体験入居</div>
-                  </div>
-                </div>
-
-                <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
-                <i className="hidden md:block ri-arrow-right-line text-2xl text-orange-600"></i>
-
-                {/* 5 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
-                  <div className="text-center w-full">
-                    <div className="text-xl font-bold text-green-800">ご入居審査</div>
+                    <div className="text-base sm:text-lg lg:text-xl font-bold text-green-800 whitespace-nowrap">受給者証の申請</div>
                   </div>
                 </div>
               </div>
 
               {/* 行間の矢印（デスクトップ：右端、モバイル：中央） */}
-              <div className="flex justify-center md:justify-end md:pr-8">
+              <div className="flex justify-center md:justify-end md:pr-14 lg:pr-[76px]">
                 <i className="ri-arrow-down-line text-2xl text-orange-600"></i>
               </div>
 
-              {/* 2行目：6〜10（右から左） */}
+              {/* 2行目：5〜8（右から左） */}
               <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-2">
-                {/* 6 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
+                {/* 5 */}
+                <div className="w-full min-w-[200px] md:min-w-0 md:w-36 lg:w-44 bg-gradient-to-br from-orange-100 to-orange-50 px-3 lg:px-4 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center">
                   <div className="text-center w-full">
-                    <div className="text-xl font-bold text-green-800">受給者証の申請</div>
+                    <div className="text-base sm:text-lg lg:text-xl font-bold text-green-800 whitespace-nowrap">支給決定</div>
+                  </div>
+                </div>
+
+                <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
+                <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
+
+                {/* 6 */}
+                <div className="w-full min-w-[200px] md:min-w-0 md:w-36 lg:w-44 bg-gradient-to-br from-orange-100 to-orange-50 px-3 lg:px-4 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center">
+                  <div className="text-center w-full">
+                    <div className="text-base sm:text-lg lg:text-xl font-bold text-green-800 whitespace-nowrap">利用契約</div>
                   </div>
                 </div>
 
@@ -1250,9 +1250,9 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
 
                 {/* 7 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
+                <div className="w-full min-w-[200px] md:min-w-0 md:w-36 lg:w-44 bg-gradient-to-br from-orange-100 to-orange-50 px-3 lg:px-4 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center">
                   <div className="text-center w-full">
-                    <div className="text-xl font-bold text-green-800">支給決定</div>
+                    <div className="text-base sm:text-lg lg:text-xl font-bold text-green-800 whitespace-nowrap">入居準備</div>
                   </div>
                 </div>
 
@@ -1260,29 +1260,9 @@ export default function Home() {
                 <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
 
                 {/* 8 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
+                <div className="w-full min-w-[200px] md:min-w-0 md:w-36 lg:w-44 bg-gradient-to-br from-orange-500 to-orange-600 px-3 lg:px-4 py-5 rounded-2xl shadow-sm border border-orange-600 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center">
                   <div className="text-center w-full">
-                    <div className="text-xl font-bold text-green-800">利用契約</div>
-                  </div>
-                </div>
-
-                <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
-                <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
-
-                {/* 9 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-100 to-orange-50 px-6 py-5 rounded-2xl shadow-sm border border-orange-300 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
-                  <div className="text-center w-full">
-                    <div className="text-xl font-bold text-green-800">入居準備</div>
-                  </div>
-                </div>
-
-                <i className="ri-arrow-down-line md:hidden text-2xl text-orange-600"></i>
-                <i className="hidden md:block ri-arrow-left-line text-2xl text-orange-600"></i>
-
-                {/* 10 */}
-                <div className="w-full md:w-auto bg-gradient-to-br from-orange-500 to-orange-600 px-6 py-5 rounded-2xl shadow-sm border border-orange-600 hover:shadow-md transition-shadow min-h-[100px] flex items-center justify-center min-w-[140px]">
-                  <div className="text-center w-full">
-                    <div className="text-xl font-bold text-white">ご入居</div>
+                    <div className="text-base sm:text-lg lg:text-xl font-bold text-white whitespace-nowrap">ご入居</div>
                   </div>
                 </div>
               </div>
@@ -1306,20 +1286,11 @@ export default function Home() {
             <div className="w-16 h-1 bg-orange-500 mx-auto"></div>
           </div>
 
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
             やすらぎの家では、一緒に働く仲間を募集しています。<br />
-            詳細な求人情報は、以下の採用サイト（Airワーク）をご覧ください。
+            求人情報（世話人・看護師）につきましては随時募集しております<br />
+            下記連絡先までお気軽にお問い合わせください。
           </p>
-
-          <a
-            href="https://airwork.net/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-full text-lg font-bold shadow-md transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
-          >
-            採用情報を見る（Airワーク）
-            <i className="ri-external-link-line"></i>
-          </a>
         </div>
       </section>
 
