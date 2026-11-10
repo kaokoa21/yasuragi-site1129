@@ -156,7 +156,7 @@ export default function Home() {
               >
                 <div className="space-y-2 flex-1 w-full">
                   <p className="text-xl font-bold text-green-800">やすらぎの家 中田</p>
-                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区中田1-9-21</p>
+                  <p className="text-sm font-medium text-gray-600 mb-2 min-h-[40px]">駿河区中田1-9-21<br /><span className="invisible select-none" aria-hidden="true">&nbsp;</span></p>
 
                   <div className="bg-orange-500 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
                     <p className="text-white text-2xl font-bold">残り3室</p>
@@ -181,7 +181,7 @@ export default function Home() {
               >
                 <div className="space-y-2 flex-1 w-full">
                   <p className="text-xl font-bold text-green-800">やすらぎの家 小鹿</p>
-                  <p className="text-sm font-medium text-gray-600 mb-2">駿河区小鹿2丁目39-1<br />プチメリル小鹿</p>
+                  <p className="text-sm font-medium text-gray-600 mb-2 min-h-[40px]">駿河区小鹿2丁目39-1<br />プチメリル小鹿</p>
 
                   <div className="bg-gray-400 p-4 rounded-2xl mt-3 shadow-md flex items-center justify-center">
                     <p className="text-white text-2xl font-bold">満室</p>
@@ -1286,9 +1286,9 @@ export default function Home() {
             <div className="w-16 h-1 bg-orange-500 mx-auto"></div>
           </div>
 
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+          <p className="text-xl md:text-2xl font-medium text-gray-700 leading-relaxed md:leading-loose">
             やすらぎの家では、一緒に働く仲間を募集しています。<br />
-            求人情報（世話人・看護師）につきましては随時募集しております<br />
+            求人情報（世話人・看護師）につきましては随時募集しております。<br />
             下記連絡先までお気軽にお問い合わせください。
           </p>
         </div>
